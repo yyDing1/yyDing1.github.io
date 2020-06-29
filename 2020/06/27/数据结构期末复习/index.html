@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="第一部分 绪论数据，数据元素，数据项，数据对象的定义。 Data_Structures &#x3D; (D, R)。其中: D是数据元素的有限集合，R是D上关系的有限集合。结构 &#x3D; 实体 + 关系。 程序 &#x3D; 算法 + 数据结构 数据结构通常包括2个层次：  逻辑结构：元素之间的关系，与计算机无关 存储结构：数据结构的存储，与计算机相关  $逻辑结构&#x3D;\left{\begin{matrix}线性结构(Lis">
+<meta name="description" content="第一部分 绪论 数据，数据元素，数据项，数据对象的定义。  Data_Structures &#x3D; (D, R)。其中: D是数据元素的有限集合，R是D上关系的有限集合。结构 &#x3D; 实体 + 关系。  程序 &#x3D; 算法 + 数据结构  数据结构通常包括2个层次：  逻辑结构：元素之间的关系，与计算机无关 存储结构：数据结构的存储，与计算机相关">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构期末复习">
 <meta property="og:url" content="http://yoursite.com/2020/06/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/index.html">
 <meta property="og:site_name" content="Dyy&#39;s blog">
-<meta property="og:description" content="第一部分 绪论数据，数据元素，数据项，数据对象的定义。 Data_Structures &#x3D; (D, R)。其中: D是数据元素的有限集合，R是D上关系的有限集合。结构 &#x3D; 实体 + 关系。 程序 &#x3D; 算法 + 数据结构 数据结构通常包括2个层次：  逻辑结构：元素之间的关系，与计算机无关 存储结构：数据结构的存储，与计算机相关  $逻辑结构&#x3D;\left{\begin{matrix}线性结构(Lis">
+<meta property="og:description" content="第一部分 绪论 数据，数据元素，数据项，数据对象的定义。  Data_Structures &#x3D; (D, R)。其中: D是数据元素的有限集合，R是D上关系的有限集合。结构 &#x3D; 实体 + 关系。  程序 &#x3D; 算法 + 数据结构  数据结构通常包括2个层次：  逻辑结构：元素之间的关系，与计算机无关 存储结构：数据结构的存储，与计算机相关">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-06-26T16:02:01.000Z">
-<meta property="article:modified_time" content="2020-06-29T10:39:27.116Z">
+<meta property="article:modified_time" content="2020-06-29T16:17:53.940Z">
 <meta property="article:author" content="超Carry的dyy">
 <meta name="twitter:card" content="summary">
 
@@ -299,25 +299,34 @@
       
 
       
-        <h1 id="第一部分-绪论"><a href="#第一部分-绪论" class="headerlink" title="第一部分 绪论"></a>第一部分 绪论</h1><p>数据，数据元素，数据项，数据对象的定义。</p>
-<p>Data_Structures = (D, R)。<br>其中: D是数据元素的有限集合，R是D上关系的有限集合。<br>结构 = 实体 + 关系。</p>
-<p>程序 = 算法 + 数据结构</p>
-<p>数据结构通常包括2个层次：</p>
+        <h1 id="第一部分-绪论"><a href="#第一部分-绪论" class="headerlink" title="第一部分 绪论"></a>第一部分 绪论</h1><ul>
+<li><p>数据，数据元素，数据项，数据对象的定义。</p>
+</li>
+<li><p>Data_Structures = (D, R)。其中: D是数据元素的有限集合，R是D上关系的有限集合。结构 = 实体 + 关系。</p>
+</li>
+<li><p>程序 = 算法 + 数据结构</p>
+</li>
+<li><p>数据结构通常包括2个层次：</p>
 <ol>
 <li>逻辑结构：元素之间的关系，与计算机无关</li>
-<li>存储结构：数据结构的存储，与计算机相关</li>
+<li>存储结构：数据结构的存储，与计算机相关<a id="more"></a>
+$数据结构=\left{\begin{matrix} 逻辑结构=\left{\begin{matrix}线性结构(List)\ 树形结构(Tree)\ 图状(Graph)\ 集合(set)\end{matrix}\right.\ \ 存储结构=\left{\begin{matrix}顺序存储\ 链式存储\ 索引存储\ 哈希(散列)存储\end{matrix}\right.\end{matrix}\right.$</li>
 </ol>
-<p>$逻辑结构=\left{\begin{matrix}线性结构(List)\ 树形结构(Tree)\ 图状(Graph)\ 集合(set)\end{matrix}\right.$</p>
-<p>$存储结构=\left{\begin{matrix}顺序存储结构\ 链式存储结构\ 索引存储结构\ 哈希(散列)存储结构\end{matrix}\right.$</p>
-<p>Python内置数据结构中:</p>
+</li>
+<li><p>Python内置数据结构中:</p>
 <ol>
 <li>线性数据结构：list, turple, str</li>
 <li>集合数据结构：set, dirt</li>
 </ol>
-<p>ADT：Abstract Data Type(抽象数据类型)<br>ABC：Abstract Base Class(抽象基类)</p>
-<p>子类与父类方法的继承与覆盖：<br>如果子类同名方法覆盖了父类的方法。仍然还可以调用父类的方法super.<strong>init</strong>(name)。</p>
-<p>错误提示信息：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    print(<span class="string">'try...'</span>)</span><br><span class="line">    r = <span class="number">10</span>  / <span class="string">'xyz'</span></span><br><span class="line">    print(<span class="string">'result:'</span>, r)</span><br><span class="line"><span class="keyword">except</span> TypeError <span class="keyword">as</span> e:</span><br><span class="line">    print(<span class="string">'TypeError:'</span>, e)</span><br><span class="line"><span class="keyword">except</span> ZeroDivisionError <span class="keyword">as</span> e:</span><br><span class="line">    print(<span class="string">'ZeroDivisionError '</span>,e)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'no error!'</span>)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    print(<span class="string">'finally...'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ADT：Abstract Data Type(抽象数据类型)</p>
+</li>
+<li><p>ABC：Abstract Base Class(抽象基类)</p>
+</li>
+<li><p>子类与父类方法的继承与覆盖：<br>如果子类同名方法覆盖了父类的方法。仍然还可以调用父类的方法(super.init)。</p>
+</li>
+<li><p>错误提示信息：</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    print(<span class="string">'try...'</span>)</span><br><span class="line">    r = <span class="number">10</span>  / <span class="string">'xyz'</span></span><br><span class="line">    print(<span class="string">'result:'</span>, r)</span><br><span class="line"><span class="keyword">except</span> TypeError <span class="keyword">as</span> e:</span><br><span class="line">    print(<span class="string">'TypeError:'</span>, e)</span><br><span class="line"><span class="keyword">except</span> ZeroDivisionError <span class="keyword">as</span> e:</span><br><span class="line">    print(<span class="string">'ZeroDivisionError '</span>,e)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'no error!'</span>)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    print(<span class="string">'finally...'</span>)</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -342,15 +351,93 @@
 <td align="center">无论出错否都执行的代码</td>
 </tr>
 </tbody></table>
-<p>算法的五大特性：有穷性，能行性，确定性，输入，输出</p>
-<p>算法具有有穷性，程序不需要具备有穷性</p>
-<p>算法设计的目标：正确性，可读性，健壮性，时间复杂度，空间复杂度</p>
-<h1 id="第二部分-栈"><a href="#第二部分-栈" class="headerlink" title="第二部分 栈"></a>第二部分 栈</h1><p>线性结构：线性结构是n(n≥0)个数据元素构成的有限序列。</p>
-<p>顺序栈基本模板：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Stack</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.entry = []</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">push</span><span class="params">(self, item)</span>:</span></span><br><span class="line">        self.entry.append(item)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pop</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.entry.pop()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">size</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> len(self.entry)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">top</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.entry[<span class="number">-1</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">empty</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> len(self.entry) == <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">clear</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.entry = []</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">str</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">""</span>.join(self.entry)</span><br></pre></td></tr></table></figure>
-<p>前缀，中缀，后缀表达式相互转换以及求值。</p>
-<p>上溢出：<br>下溢出：</p>
-<h1 id="第三部分-队列"><a href="#第三部分-队列" class="headerlink" title="第三部分 队列"></a>第三部分 队列</h1>
+</li>
+<li><p>算法的五大特性：有穷性，能行性，确定性，输入，输出。</p>
+</li>
+<li><p>算法具有有穷性，程序不需要具备有穷性。</p>
+</li>
+<li><p>算法设计的目标：正确性，可读性，健壮性，时间复杂度，空间复杂度。</p>
+<h1 id="第二部分-栈"><a href="#第二部分-栈" class="headerlink" title="第二部分 栈"></a>第二部分 栈</h1></li>
+<li><p>线性结构：线性结构是n(n≥0)个数据元素构成的有限序列。</p>
+</li>
+<li><p>顺序栈基本模板：</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Stack</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.entry = []</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">push</span><span class="params">(self, item)</span>:</span></span><br><span class="line">        self.entry.append(item)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pop</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.entry.pop()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">size</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> len(self.entry)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">top</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.entry[<span class="number">-1</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">empty</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> len(self.entry) == <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">clear</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.entry = []</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">str</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">""</span>.join(self.entry)</span><br></pre></td></tr></table></figure></li>
+<li><p>前缀，中缀，后缀表达式相互转换以及求值。</p>
+</li>
+<li><p>上溢出：储存空间溢出(相当于无限递归)</p>
+</li>
+<li><p>下溢出：栈空</p>
+</li>
+</ul>
+<h1 id="第三部分-队列"><a href="#第三部分-队列" class="headerlink" title="第三部分 队列"></a>第三部分 队列</h1><ul>
+<li><p>循环队列：</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Queue</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, cap=<span class="number">2</span>)</span>:</span></span><br><span class="line">        self._capacity = cap</span><br><span class="line">        self.entry = [<span class="literal">None</span>] * cap</span><br><span class="line">        self._front = <span class="number">0</span></span><br><span class="line">        self._rear = <span class="number">-1</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">empty</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._front == (self._rear + <span class="number">1</span>) % self._capacity</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">size</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> (self._rear - self._front + <span class="number">1</span> + self._capacity) % self._capacity</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">push</span><span class="params">(self, item)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self._front == (self._rear + <span class="number">2</span>) % self._capacity:</span><br><span class="line">            self.resize(<span class="number">2</span> * len(self.entry))</span><br><span class="line">        self._rear = (self._rear + <span class="number">1</span>) % self._capacity</span><br><span class="line">        self.entry[self._rear] = item</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pop</span><span class="params">(self)</span>:</span></span><br><span class="line">        self._front = (self._front + <span class="number">1</span>) % self._capacity</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">front</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.entry[self._front]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">resize</span><span class="params">(self, cap)</span>:</span></span><br><span class="line">        pre = self.entry</span><br><span class="line">        self.entry = [<span class="literal">None</span>] * cap</span><br><span class="line">        p = self._front</span><br><span class="line">        now = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> p != self._rear:</span><br><span class="line">            self.entry[now] = pre[p]</span><br><span class="line">            p = (p + <span class="number">1</span>) % self._capacity</span><br><span class="line">            now += <span class="number">1</span></span><br><span class="line">        self.entry[now] = pre[self._rear]</span><br><span class="line">        self._front = <span class="number">0</span></span><br><span class="line">        self._rear = now</span><br><span class="line">        self._capacity = cap</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>链队列：</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, item, link=None)</span>:</span></span><br><span class="line">        self.entry = item</span><br><span class="line">        self.next = link</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Queue</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self._size = <span class="number">0</span></span><br><span class="line">        self._front = self._rear = Node(<span class="literal">None</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">size</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._size</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">push</span><span class="params">(self, item)</span>:</span></span><br><span class="line">        self._size += <span class="number">1</span></span><br><span class="line">        new_rear = Node(item)</span><br><span class="line">        self._rear.next = new_rear</span><br><span class="line">        self._rear = new_rear</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pop</span><span class="params">(self)</span>:</span></span><br><span class="line">        self._size -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> self.empty():</span><br><span class="line">            self._front = self._rear = Node(<span class="literal">None</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            old_front = self._front.next</span><br><span class="line">            self._front.next = old_front.next</span><br><span class="line">            </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">empty</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._size == <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">front</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._front.next.entry</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">back</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._rear.entry</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self._size == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">""</span></span><br><span class="line">        p = self._front</span><br><span class="line">        lst = []</span><br><span class="line">        <span class="keyword">while</span> p != self._rear:</span><br><span class="line">            lst.append(p.next.entry)</span><br><span class="line">            p = p.next</span><br><span class="line">        <span class="keyword">return</span> <span class="string">" "</span>.join(map(str, lst))</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>应用：拓扑先序遍历，迷宫求解，树的层次遍历</li>
+</ul>
+<h1 id="第四部分-线性表"><a href="#第四部分-线性表" class="headerlink" title="第四部分 线性表"></a>第四部分 线性表</h1><h2 id="线性存储"><a href="#线性存储" class="headerlink" title="线性存储"></a>线性存储</h2><ul>
+<li>线性结构是n(n≥0)个数据<strong>元素</strong>构成的有限序列。</li>
+<li>所有元素按照逻辑顺序依次存储在一块连续的存储空间中，简称<strong>顺序表</strong>。</li>
+<li>Python内置线性结构：list, turple, str。</li>
+<li>线性表的顺序存储：存取O(1),称顺序表具有<strong>随机存取</strong>(Random Access)或<strong>直接存取</strong>的特性。</li>
+<li>优点：<ol>
+<li>程序设计简单。</li>
+<li>元素的物理位置反映逻辑关系，可实现随机存取，根据位序的读写时间效率为O(1)。</li>
+<li>存储密度为1。</li>
+</ol>
+</li>
+<li>缺点：<ol>
+<li>须事先确定初始表长</li>
+<li>插入删除会带来元素的移动</li>
+<li>多次插入后初始空间耗尽，造成溢出或需要空间扩容</li>
+</ol>
+</li>
+</ul>
+<h2 id="链式存储"><a href="#链式存储" class="headerlink" title="链式存储"></a>链式存储</h2><ul>
+<li>单链表，循环链表，双向链表等。(是/否带头结点，单向/双向，是/否循环)</li>
+<li>优点：<ol>
+<li>动态管理存储空间，不需事先申请空间</li>
+<li>不需要担心溢出</li>
+<li>插入删除只引起指针的变化，效率更高。</li>
+</ol>
+</li>
+<li>缺点：<ol>
+<li>顺序存取，非随机存取，根据位序读写效率为O(n)</li>
+<li>由于涉及到指针操作，程序设计的复杂性增大</li>
+<li>链域也占空间，使存储密度降低，必定小于1。</li>
+</ol>
+</li>
+<li>单链表类代码  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SingleLinkedList</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self._head = <span class="literal">None</span></span><br><span class="line">        self._size = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">insert</span><span class="params">(self, pos, item)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> pos == <span class="number">0</span>:</span><br><span class="line">            self._head = Node(item, self._head)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            p = self._head</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(pos - <span class="number">1</span>):</span><br><span class="line">                p = p.next</span><br><span class="line">            p.next = Node(item, p.next)</span><br><span class="line">        self._size += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">empty</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._size == <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">size</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._size</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">remove</span><span class="params">(self, pos)</span>:</span></span><br><span class="line">        self._size -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> pos == <span class="number">0</span>:</span><br><span class="line">            self._head = self._head.next</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            p = self._head</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(pos - <span class="number">1</span>):</span><br><span class="line">                p = p.next</span><br><span class="line">            p.next = p.next.next</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">debug</span><span class="params">(self)</span>:</span></span><br><span class="line">        p = self._head</span><br><span class="line">        <span class="keyword">if</span> self._size == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">        <span class="keyword">while</span> p:</span><br><span class="line">            print(p.entry, end=<span class="string">" "</span>)</span><br><span class="line">            p = p.next</span><br><span class="line">        print()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="补充一个题"><a href="#补充一个题" class="headerlink" title="补充一个题"></a>补充一个题</h2><p>题目描述：假设列表lst中存储了若干个整数，设计时间性能和空间性能尽可能高效的算法，将lst中小于等于x的元素都放在表的前端，大于x的元素都放在表的后端。<strong>思路</strong>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solve</span><span class="params">(lst, data)</span>:</span></span><br><span class="line">    head, tail = <span class="number">0</span>, len(lst) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> head != tail:</span><br><span class="line">        <span class="keyword">if</span> lst[head] &lt;= data:</span><br><span class="line">            head += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            tmp = lst[head]</span><br><span class="line">            lst[head] = lst[tail]</span><br><span class="line">            lst[tail] = tmp</span><br><span class="line">            tail -= <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> lst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(solve([<span class="number">3</span>, <span class="number">-6</span>, <span class="number">1</span>, <span class="number">-2</span>, <span class="number">4</span>, <span class="number">9</span>], <span class="number">0</span>))</span><br></pre></td></tr></table></figure>
+
+<h1 id="第五部分-递归"><a href="#第五部分-递归" class="headerlink" title="第五部分 递归"></a>第五部分 递归</h1><blockquote>
+<p>To Iterate is Human, to Recurse, Divine.<br>                                 ——L. Peter Deutsc </p>
+</blockquote>
+<ul>
+<li><p>递归是一种自我嵌套定义方式，可用于对数学概念、实体、问题解决方案等进行定义。</p>
+</li>
+<li><p>Recursion is the process of repeating items in a self-similar way. (wiki)</p>
+</li>
+<li><p>递归“三定律”：</p>
+<ol>
+<li>必须有递归结束的条件，即一个或多个递归出口，通常对应于最小规模或满足某个条件时无需递归可直接完成的情况，常被称为基本情况(Base Case)。</li>
+<li>原问题可以被分解为规模更小但和原问题有着相同解法的子问题(调用自身)，并逐渐向基本情况演进。</li>
+<li>子问题的个数必须是有限的，相应地，递归调用的次数也必须是有限的，即保证不管多大的规模，都可以最终到达一个基本情况。</li>
+</ol>
+</li>
+<li><p>实例较多，除了概念没啥其他好说的。</p>
+</li>
+</ul>
+<h1 id="第六部分-查找"><a href="#第六部分-查找" class="headerlink" title="第六部分 查找"></a>第六部分 查找</h1>
       
     </div>
     
@@ -500,7 +587,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一部分-绪论"><span class="nav-number">1.</span> <span class="nav-text">第一部分 绪论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二部分-栈"><span class="nav-number">2.</span> <span class="nav-text">第二部分 栈</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三部分-队列"><span class="nav-number">3.</span> <span class="nav-text">第三部分 队列</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一部分-绪论"><span class="nav-number">1.</span> <span class="nav-text">第一部分 绪论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二部分-栈"><span class="nav-number">2.</span> <span class="nav-text">第二部分 栈</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三部分-队列"><span class="nav-number">3.</span> <span class="nav-text">第三部分 队列</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四部分-线性表"><span class="nav-number">4.</span> <span class="nav-text">第四部分 线性表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性存储"><span class="nav-number">4.1.</span> <span class="nav-text">线性存储</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链式存储"><span class="nav-number">4.2.</span> <span class="nav-text">链式存储</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#补充一个题"><span class="nav-number">4.3.</span> <span class="nav-text">补充一个题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第五部分-递归"><span class="nav-number">5.</span> <span class="nav-text">第五部分 递归</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第六部分-查找"><span class="nav-number">6.</span> <span class="nav-text">第六部分 查找</span></a></li></ol></div>
             
 
           </div>
