@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ed2dfe;
+  background: #ebc69a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3133,4 +3133,14 @@ pre .javascript .function {
   #footer a {
     coler: #eee;
   }
+}
+.hider_title {
+  font-family: "Microsoft Yahei";
+  cursor: pointer;
+}
+.close:after {
+  content: "▼";
+}
+.open:after {
+  content: "▲";
 }
