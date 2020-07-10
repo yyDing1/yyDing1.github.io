@@ -91,7 +91,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/07/07/%E4%B8%83%E6%9C%88%E5%88%9D%E5%88%B7%E9%A2%98%E9%9B%86/claw.png">
 <meta property="og:image" content="http://yoursite.com/2020/07/07/%E4%B8%83%E6%9C%88%E5%88%9D%E5%88%B7%E9%A2%98%E9%9B%86/1.jpg">
 <meta property="article:published_time" content="2020-07-07T10:22:24.000Z">
-<meta property="article:modified_time" content="2020-07-10T09:28:24.911Z">
+<meta property="article:modified_time" content="2020-07-10T09:36:13.870Z">
 <meta property="article:author" content="超Carry的dyy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2020/07/07/%E4%B8%83%E6%9C%88%E5%88%9D%E5%88%B7%E9%A2%98%E9%9B%86/%E4%B8%8D%E6%84%A7%E6%98%AF%E6%88%91.jpg">
@@ -258,6 +258,7 @@
         
 
         <div class="post-meta">
+          
           <span class="post-time">
             
               <span class="post-meta-item-icon">
@@ -279,6 +280,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/07/07/%E4%B8%83%E6%9C%88%E5%88%9D%E5%88%B7%E9%A2%98%E9%9B%86/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/07/07/%E4%B8%83%E6%9C%88%E5%88%9D%E5%88%B7%E9%A2%98%E9%9B%86/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -351,9 +362,9 @@
 </div></div>
 <h1 id="Codeforces-1368D"><a href="#Codeforces-1368D" class="headerlink" title="Codeforces 1368D"></a><a href="https://codeforces.com/contest/1368/problem/D" target="_blank" rel="noopener">Codeforces 1368D</a></h1><p>难度：1700</p>
 <h2 id="题目大意-2"><a href="#题目大意-2" class="headerlink" title="题目大意"></a>题目大意</h2><p>给你一个数组$a_1, a_2, …, a_n$，可以进行的操作：取出两个数$x, y$，计算出$xANDy$和$xORy$，再放进原数组里面去。</p>
-<p>问：经过有限次操作后$\sum_{i = 1}^{i = n}{a_i^2}$的最大值是多少。</p>
+<p>问：经过有限次操作后$\sum_{i = 1}^{n}{a_i^2}$的最大值是多少。</p>
 <h2 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h2><p>首先$xANDy + xORy = x + y$，那么对于数组无论进行什么操作，$\sum_{i = 1}^{n}{a_i}$始终不变。要使得$\sum_{i = 1}^{n}{a_i^2}$，就要使数组中的数两极分化到极限。所以策略是每轮操作都变换出一个最大的数。</p>
-<p>$xORy \geq x, y$，所以$a_1|a_2|…|a_n$就是最大的数(设为新的$a_1$)，此时的$a_1|$任何数都是它本身，故最大。将$a_1$取出，对剩下n - 1个数进行相同操作。依次类推。$O(n^2)$。将全部操作转换为数位操作，先全部进行2进制数位统计再去取，复杂度可简化为$O(nk)$，本题的$k = 20$。</p>
+<p>$xORy \geq x, y$，所以$a_1|a_2|…|a_n$就是最大的数(设为新的$a_1$)，此时的$a_1|$任何数都是它本身，故最大。将$a_1$取出，对剩下n-1个数进行相同操作。依次类推。$O(n^2)$。将全部操作转换为数位操作，先全部进行2进制数位统计再去取，复杂度可简化为$O(nk)$，本题的$k = 20$。</p>
 <h2 id="AC代码-5"><a href="#AC代码-5" class="headerlink" title="AC代码"></a>AC代码</h2><div><div class="fold_hider"><div class="close hider_title">点击显/隐代码</div></div><div class="fold">
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> pair &lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; PII;</span><br><span class="line"><span class="comment">//head</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="built_in">vector</span>&lt;ll&gt; &amp;vt, ll x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">25</span>; i &gt;= <span class="number">0</span>; i--)&#123;</span><br><span class="line">        <span class="keyword">int</span> c = (x &gt;&gt; i) &amp; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (c == <span class="number">1</span>)&#123;</span><br><span class="line">            vt[i]++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">debug</span><span class="params">(<span class="built_in">vector</span>&lt;ll&gt; &amp;vt)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; vt.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; vt[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    ll tmp;</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;ll&gt; <span class="title">vt</span><span class="params">(<span class="number">33</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">    ll sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &amp;tmp);</span><br><span class="line">        sum += tmp;</span><br><span class="line">        solve(vt, tmp);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//debug(vt);</span></span><br><span class="line">    ll ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">        ll cnt = <span class="number">1</span>, tt = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= <span class="number">25</span>; j++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (vt[j] &gt; <span class="number">0</span>)&#123;</span><br><span class="line">                tt += (<span class="number">1</span> &lt;&lt; j);</span><br><span class="line">                vt[j]--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        ans += tt * tt;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </div></div>
@@ -430,6 +441,9 @@
 
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -707,6 +721,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'M21Od3YI7MJCQ4N6qNcfxw13-gzGzoHsz',
+        appKey: 'jFemVqFPdSU8qc61bClHSemT',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
