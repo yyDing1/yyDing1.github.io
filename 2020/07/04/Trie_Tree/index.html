@@ -90,7 +90,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/07/04/Trie_Tree/insert.png">
 <meta property="og:image" content="http://yoursite.com/2020/07/04/Trie_Tree/search.png">
 <meta property="article:published_time" content="2020-07-04T15:49:53.000Z">
-<meta property="article:modified_time" content="2020-07-10T09:41:10.070Z">
+<meta property="article:modified_time" content="2020-07-12T16:19:34.637Z">
 <meta property="article:author" content="超Carry的dyy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2020/07/04/Trie_Tree/%E5%AD%97%E5%85%B8%E6%A0%91.jpg">
@@ -318,23 +318,47 @@
 <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><blockquote>
 <p>Trie Tree：字典树，前缀树</p>
 </blockquote>
-<p>具体来说，Trie一般支持两个操作：</p>
+<p>trie是一个以空间换时间的算法</p>
+<p>网络上关于字典树的描述不一，可以将边作为字符，也可将节点作为字符。(感觉把节点作为字符图好画点)。</p>
+<ul>
+<li>字典树的基础定义部分很简单，如下是一颗包含单词ARE, AS, DOT1, NEWS, NOT, ZEN的字典树(网图，‘1’乱入了)。</li>
+<li>字典树通过tree[当前节点][当前字符]来访问下一个节点，在插入时已经对于字典树的节点进行好了编号。(具体怎么表示看下面的代码部分)。</li>
+<li>每一个字符一个节点，字典树的总结点数小于等于总字母数。可作为对tree进行初始化时的参考数值。</li>
+</ul>
+<p><img src="/2020/07/04/Trie_Tree/字典树.jpg" alt="字典树"></p>
+<h2 id="为什么用字典树"><a href="#为什么用字典树" class="headerlink" title="为什么用字典树"></a>为什么用字典树</h2><ul>
+<li>存取：有公用节点，一定程度上节省了存储空间</li>
+<li>查找：在n个平均长度为k的字符串中去查找给定的字符串是否存在。<ul>
+<li>对于单次查找<ul>
+<li>顺序查找：读取O(nk)，查找O(nk)。总O(nk)。</li>
+<li>字典树查找：读取O(nk)，查找O(k)。总O(nk)。</li>
+</ul>
+</li>
+<li>对于m次查找<ul>
+<li>顺序查找：读取O(nk)，查找O(nkm)。总O(nkm)。</li>
+<li>字典树查找：读取O(nk)，查找O(mk)。总O(max(n, m)k)。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>当n，m较大时，字典树的查找具有很大优势。当然字典树也是AC自动机实现的前提。</p>
+<p>当然对前缀进行查找时字典树的更显优势，详见下文的题hdu1251。</p>
+<h1 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h1><p>具体来说，Trie一般支持两个操作：</p>
 <ol>
 <li>Trie.insert(W)：第一个操作是插入操作，就是将一个字符串W加入到集合中。</li>
+</ol>
+<p><img src="/2020/07/04/Trie_Tree/insert.png" alt="insert"></p>
+<ol>
 <li>Trie.search(S)：第二个操作是查询操作，就是查询一个字符串S是不是在集合中。</li>
 </ol>
-<p>trie是一个以空间换时间的算法</p>
-<p>网络上关于字典树的描述不一，可以将边作为字符，也可将节点作为字符。(主要方便理解)</p>
-<p><img src="/2020/07/04/Trie_Tree/字典树.jpg" alt="字典树"></p>
-<h1 id="伪代码："><a href="#伪代码：" class="headerlink" title="伪代码："></a>伪代码：</h1><h2 id="insert"><a href="#insert" class="headerlink" title="insert"></a>insert</h2><p><img src="/2020/07/04/Trie_Tree/insert.png" alt="insert"></p>
-<h2 id="search"><a href="#search" class="headerlink" title="search"></a>search</h2><p><img src="/2020/07/04/Trie_Tree/search.png" alt="search"></p>
-<h1 id="数组含义"><a href="#数组含义" class="headerlink" title="数组含义"></a>数组含义</h1><p>含义：</p>
-<ol>
+<p><img src="/2020/07/04/Trie_Tree/search.png" alt="search"></p>
+<h2 id="数组含义："><a href="#数组含义：" class="headerlink" title="数组含义："></a>数组含义：</h2><ol>
 <li>int tree[MAX_NODE][CHARSET]：树状数组(MAX_NODE：字母总数, CHARSET：字符集的字母数)</li>
 <li>int color[MAX_NODE]：节点被染的颜色(color[i] == 1：存在以i节点为末尾的单词, 反之不存在)</li>
 <li>int cnt[MAX_NODE]：节点被访问数(前缀数)</li>
 </ol>
-<div><div class="fold_hider"><div class="close hider_title">点击显/隐代码</div></div><div class="fold">
+<h2 id="简单模板"><a href="#简单模板" class="headerlink" title="简单模板"></a>简单模板</h2><div><div class="fold_hider"><div class="close hider_title">点击显/隐代码</div></div><div class="fold">
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> tree[N][<span class="number">26</span>];</span><br><span class="line"><span class="keyword">int</span> color[N];</span><br><span class="line"><span class="keyword">int</span> cnt[N];</span><br><span class="line"><span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">char</span> s[])</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> p = <span class="number">0</span>, n = <span class="built_in">strlen</span>(s);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> c = s[i] - <span class="string">'a'</span>;</span><br><span class="line">        <span class="keyword">if</span> (tree[p][c] == <span class="number">0</span>)&#123;</span><br><span class="line">            tree[p][c] = ++num;</span><br><span class="line">        &#125;</span><br><span class="line">        p = tree[p][c];</span><br><span class="line">        cnt[p]++;</span><br><span class="line">    &#125;</span><br><span class="line">    color[p] = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">search</span><span class="params">(<span class="keyword">char</span> s[])</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> p = <span class="number">0</span>, n = <span class="built_in">strlen</span>(s);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> c = s[i] - <span class="string">'a'</span>;</span><br><span class="line">        p = tree[p][c];</span><br><span class="line">        <span class="keyword">if</span> (p == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> color[p];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </div></div>
 <h1 id="Attention！Attention！Attention！"><a href="#Attention！Attention！Attention！" class="headerlink" title="Attention！Attention！Attention！"></a><strong>Attention！Attention！Attention！</strong></h1><p><strong>用C风格的字符串！用C风格的字符串！用C风格的字符串！</strong></p>
@@ -529,7 +553,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#伪代码："><span class="nav-number">2.</span> <span class="nav-text">伪代码：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#insert"><span class="nav-number">2.1.</span> <span class="nav-text">insert</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#search"><span class="nav-number">2.2.</span> <span class="nav-text">search</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组含义"><span class="nav-number">3.</span> <span class="nav-text">数组含义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Attention！Attention！Attention！"><span class="nav-number">4.</span> <span class="nav-text">Attention！Attention！Attention！</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码优化："><span class="nav-number">5.</span> <span class="nav-text">代码优化：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题"><span class="nav-number">6.</span> <span class="nav-text">题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hdu1251-近似于裸题"><span class="nav-number">6.1.</span> <span class="nav-text">hdu1251(近似于裸题)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POJ3630"><span class="nav-number">6.2.</span> <span class="nav-text">POJ3630</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POJ2001"><span class="nav-number">6.3.</span> <span class="nav-text">POJ2001</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HDU1075"><span class="nav-number">6.4.</span> <span class="nav-text">HDU1075</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HDU4825"><span class="nav-number">6.5.</span> <span class="nav-text">HDU4825</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HDU5536"><span class="nav-number">6.6.</span> <span class="nav-text">HDU5536</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POJ3764"><span class="nav-number">6.7.</span> <span class="nav-text">POJ3764</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#感受"><span class="nav-number">7.</span> <span class="nav-text">感受</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么用字典树"><span class="nav-number">1.1.</span> <span class="nav-text">为什么用字典树</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#具体操作"><span class="nav-number">2.</span> <span class="nav-text">具体操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组含义："><span class="nav-number">2.1.</span> <span class="nav-text">数组含义：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单模板"><span class="nav-number">2.2.</span> <span class="nav-text">简单模板</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Attention！Attention！Attention！"><span class="nav-number">3.</span> <span class="nav-text">Attention！Attention！Attention！</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码优化："><span class="nav-number">4.</span> <span class="nav-text">代码优化：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题"><span class="nav-number">5.</span> <span class="nav-text">题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hdu1251-近似于裸题"><span class="nav-number">5.1.</span> <span class="nav-text">hdu1251(近似于裸题)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POJ3630"><span class="nav-number">5.2.</span> <span class="nav-text">POJ3630</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POJ2001"><span class="nav-number">5.3.</span> <span class="nav-text">POJ2001</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HDU1075"><span class="nav-number">5.4.</span> <span class="nav-text">HDU1075</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HDU4825"><span class="nav-number">5.5.</span> <span class="nav-text">HDU4825</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HDU5536"><span class="nav-number">5.6.</span> <span class="nav-text">HDU5536</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POJ3764"><span class="nav-number">5.7.</span> <span class="nav-text">POJ3764</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#感受"><span class="nav-number">6.</span> <span class="nav-text">感受</span></a></li></ol></div>
             
 
           </div>
