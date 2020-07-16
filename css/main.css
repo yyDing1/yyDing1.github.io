@@ -1063,7 +1063,7 @@ pre .javascript .function {
   right: 30px;
   z-index: 1050;
   padding: 0 6px;
-  width: 24px;
+  width: initial;
   background: #222;
   font-size: 12px;
   opacity: 0.6;
@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #25e7df;
+  background: #ffffc6;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2589,7 +2589,7 @@ pre .javascript .function {
 .header {
   position: relative;
   margin: 0 auto;
-  width: 75%;
+  width: 90%;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .header {
@@ -2649,7 +2649,7 @@ pre .javascript .function {
   }
 }
 .container .main-inner {
-  width: 75%;
+  width: 90%;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .container .main-inner {
@@ -2708,7 +2708,7 @@ pre .javascript .function {
   display: none;
 }
 .footer-inner {
-  width: 75%;
+  width: 90%;
   padding-left: 260px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
