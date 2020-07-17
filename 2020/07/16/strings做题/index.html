@@ -87,7 +87,7 @@
 <meta property="og:description" content="主要是codeforces 1600 - 2000的题，牛客那题是赛场自闭后来看题解补的。不得不说这些题还是有点烧脑子的Orz。题已设置超链接。 emmmm，感觉字符串的题真的很神奇。 感觉将算法写成博客太费时间了，而且现在也只是初学阶段，也没有大量做题，也没什么特别的理解，打算以后再写(主要是刚学应该一时半会忘不掉)。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-16T12:26:35.000Z">
-<meta property="article:modified_time" content="2020-07-16T15:58:51.488Z">
+<meta property="article:modified_time" content="2020-07-17T03:34:56.570Z">
 <meta property="article:author" content="超Carry的dyy">
 <meta name="twitter:card" content="summary">
 
@@ -387,10 +387,10 @@
 <li>很显然，如果两个字符串含有的相同字母数量不相等，那一定不可能。</li>
 <li>如果字符串含有相同字母，那么一定可以，下面是简单证明。<ul>
 <li>不断对$s$进行同一个子串的长度为2的逆转操作(相当于交换两个相邻的字符)，显然偶数次逆转后还是原串$s$。</li>
-<li>对$t$进行相邻字符串的交换操作，直至其变为原本的$s$。</li>
+<li>对$t$进行相邻字符的交换操作，直至其变为原本的$s$。</li>
 <li>若此时交换次数为偶数，则两者相等，成立。</li>
 <li>若此时交换次数为奇数，则选取$t$中两个相同的字符，通过一系列两两交换这操作使得这两个字符交换。</li>
-<li>使得$t_i$，$t_j$交换位置，需要重复交换相邻字符串$2\times (i - j) - 1$次，对$t$的总操作次数为奇数+奇数=偶数。成立。</li>
+<li>使得$t_i$，$t_j$交换位置，需要重复交换相邻字符$2\times (i - j) - 1$次，对$t$的总操作次数为奇数+奇数=偶数。成立。</li>
 </ul>
 </li>
 <li>如果字符串中不含相同字母，这个字符串长度最大为26，这就大大减小了数据范围的约束。<strong>从两个串的逆序数入手</strong>。得出逆序数相差偶数可以，逆序数为奇数不可以。下面是证明。<ul>
@@ -408,7 +408,7 @@
 </div></div>
 <h1 id="Nowcoder-A"><a href="#Nowcoder-A" class="headerlink" title="Nowcoder????A"></a><a href="https://ac.nowcoder.com/acm/contest/5667/A" target="_blank" rel="noopener">Nowcoder????A</a></h1><p>难度：好难($qwq$)</p>
 <h2 id="原题翻译"><a href="#原题翻译" class="headerlink" title="原题翻译"></a>原题翻译</h2><p>给定$n$个字符串$s_1, s_2, s_3, …, s_n$。定义$f(s, t)$为满足$s_{1…t} = s_{|t| - i + 1…t}$的最大值$i$，如果这样的$i$不存在，那么$f(s, t) = 0$，现在要算以下算式的值。</p>
-<script type="math/tex; mode=display">\sum_{i = 1}^{n}{\sum_{j = 1}^{n}{f(s_i, s_j)^2}}(mod \quad 998244353)</script><h2 id="解题思路-official"><a href="#解题思路-official" class="headerlink" title="解题思路(official)"></a>解题思路(official)</h2><p>$hash + kmp$</p>
+<script type="math/tex; mode=display">\sum_{i = 1}^{n}{\sum_{j = 1}^{n}{f(s_i, s_j)^2}}(mod \ 998244353)</script><h2 id="解题思路-official"><a href="#解题思路-official" class="headerlink" title="解题思路(official)"></a>解题思路(official)</h2><p>$hash + kmp$</p>
 <ol>
 <li>首先，前缀的总数量和后缀的总数量都是$O(\sum|s_i|)$的，所以可以先把每个后缀的$hash$值存起来。</li>
 <li>然后枚举每个串$s$的每个前缀$s_{1..i}$, 有多少个后缀和枚举的这个前缀相同，记为$cnt[i]$，则可以说明有$cnt[i]$个串的后$i$位与$s$的前$i$位相同。</li>
