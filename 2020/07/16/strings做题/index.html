@@ -87,7 +87,7 @@
 <meta property="og:description" content="主要是codeforces 1600 - 2000的题，牛客那题是赛场自闭后来看题解补的。不得不说这些题还是有点烧脑子的Orz。题已设置超链接。 emmmm，感觉字符串的题真的很神奇。 感觉将算法写成博客太费时间了，而且现在也只是初学阶段，也没有大量做题，也没什么特别的理解，打算以后再写(主要是刚学应该一时半会忘不掉)。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-16T12:26:35.000Z">
-<meta property="article:modified_time" content="2020-07-17T03:38:58.195Z">
+<meta property="article:modified_time" content="2020-07-17T03:43:02.257Z">
 <meta property="article:author" content="超Carry的dyy">
 <meta name="twitter:card" content="summary">
 
@@ -413,7 +413,7 @@
 <li>首先，前缀的总数量和后缀的总数量都是$O(\sum|s_i|)$的，所以可以先把每个后缀的$hash$值存起来。</li>
 <li>然后枚举每个串$s$的每个前缀$s_{1..i}$，有多少个后缀和枚举的这个前缀相同，记为$cnt[i]$，则可以说明有$cnt[i]$个串的后$i$位与$s$的前$i$位相同。</li>
 <li>但这个不能直接拿来算答案，因为一个串可能会给Cnt[]数组带来大于1的贡献。</li>
-<li>现在考虑去重，比如两个$aba$，其中会有两个前缀$a$, $aba$被算到，但实际上只应该取$aba$而不是$a$。所以我们考虑把每个串的$nxt$数组求出来，求完$nxt$数组之后再从前往后$cnt[nxt[i]] -= cnt[i]$即完成去重，然后直接算答案即可。</li>
+<li>现在考虑去重，比如两个$aba$，其中会有两个前缀$a$，$aba$被算到，但实际上只应该取$aba$而不是$a$。所以我们考虑把每个串的$nxt$数组求出来，求完$nxt$数组之后再从前往后$cnt[nxt[i]] -= cnt[i]$即完成去重，然后直接算答案即可。</li>
 <li>时间复杂度: $O(\sum|s_i|)$</li>
 </ol>
 <h2 id="AC代码-5"><a href="#AC代码-5" class="headerlink" title="AC代码"></a>AC代码</h2><p>emmm希望下次遇到这种题的时候能做出来</p>
