@@ -79,19 +79,17 @@
 
 
 
-<meta name="description" content="明天(7.7)就是高考了，祝愿这届邗中20级毕业生都能金榜题名，考上理想的大学！！ 加油，奥利给！">
+<meta name="description" content="这个专题的题可以分为以下几类：  在母字符串中找子字符串(出现次数，出现位置等等)，这类基本都是水题 循环节问题，这类题有了变化，相对更活一些 一堆字符串里面找最长公共子串的问题。暴力 + string.find()完事 回文串问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="加油！！！">
-<meta property="og:url" content="http://yoursite.com/2020/07/06/%E9%AB%98%E8%80%83%E7%A5%9D%E7%A6%8F/index.html">
+<meta property="og:title" content="kuangbin专题十六 KMP &amp; 扩展KMP &amp; Manacher">
+<meta property="og:url" content="http://yoursite.com/2020/08/01/kuangbin%E4%B8%93%E9%A2%9816/index.html">
 <meta property="og:site_name" content="Dyy&#39;s blog">
-<meta property="og:description" content="明天(7.7)就是高考了，祝愿这届邗中20级毕业生都能金榜题名，考上理想的大学！！ 加油，奥利给！">
+<meta property="og:description" content="这个专题的题可以分为以下几类：  在母字符串中找子字符串(出现次数，出现位置等等)，这类基本都是水题 循环节问题，这类题有了变化，相对更活一些 一堆字符串里面找最长公共子串的问题。暴力 + string.find()完事 回文串问题">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/07/06/%E9%AB%98%E8%80%83%E7%A5%9D%E7%A6%8F/%E9%AB%98%E8%80%83%E7%A5%9D%E7%A6%8F.jpg">
-<meta property="article:published_time" content="2020-07-06T14:13:30.000Z">
-<meta property="article:modified_time" content="2020-07-06T15:27:14.670Z">
+<meta property="article:published_time" content="2020-08-01T15:27:37.000Z">
+<meta property="article:modified_time" content="2020-08-01T16:35:03.940Z">
 <meta property="article:author" content="超Carry的dyy">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/07/06/%E9%AB%98%E8%80%83%E7%A5%9D%E7%A6%8F/%E9%AB%98%E8%80%83%E7%A5%9D%E7%A6%8F.jpg">
 
 
 
@@ -121,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/07/06/高考祝福/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/08/01/kuangbin专题16/"/>
 
 
 
 
 
-  <title>加油！！！ | Dyy's blog</title>
+  <title>kuangbin专题十六 KMP & 扩展KMP & Manacher | Dyy's blog</title>
   
 
 
@@ -234,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/06/%E9%AB%98%E8%80%83%E7%A5%9D%E7%A6%8F/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/01/kuangbin%E4%B8%93%E9%A2%9816/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="超Carry的dyy">
@@ -251,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">加油！！！</h1>
+          <h1 class="post-title" itemprop="name headline">kuangbin专题十六 KMP & 扩展KMP & Manacher</h1>
         
 
         <div class="post-meta">
@@ -264,8 +262,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-06T22:13:30+08:00">
-                2020-07-06
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-01T23:27:37+08:00">
+                2020-08-01
               </time>
             
 
@@ -283,8 +281,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/07/06/%E9%AB%98%E8%80%83%E7%A5%9D%E7%A6%8F/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/07/06/%E9%AB%98%E8%80%83%E7%A5%9D%E7%A6%8F/" itemprop="commentCount"></span>
+                <a href="/2020/08/01/kuangbin%E4%B8%93%E9%A2%9816/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/08/01/kuangbin%E4%B8%93%E9%A2%9816/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -312,9 +310,45 @@
       
 
       
-        <p>明天(7.7)就是高考了，祝愿这届邗中20级毕业生都能金榜题名，考上理想的大学！！</p>
-<p><strong>加油，奥利给！</strong></p>
-<p><img src="/2020/07/06/%E9%AB%98%E8%80%83%E7%A5%9D%E7%A6%8F/高考祝福.jpg" alt="高考祝福"></p>
+        <p>这个专题的题可以分为以下几类：</p>
+<ol>
+<li>在母字符串中找子字符串(出现次数，出现位置等等)，这类基本都是水题</li>
+<li>循环节问题，这类题有了变化，相对更活一些</li>
+<li>一堆字符串里面找最长公共子串的问题。暴力 + string.find()完事</li>
+<li>回文串问题<a id="more"></a>
+</li>
+</ol>
+<h1 id="循环节问题"><a href="#循环节问题" class="headerlink" title="循环节问题"></a>循环节问题</h1><p>求最小循环节</p>
+<p>原本的想法是：</p>
+<ol>
+<li>如果这个字符串有循环节，那么可以推出$n - nxt[n]$为最小循环节的长度</li>
+<li>$n - nxt[n]$是字符串可能的最小循环节</li>
+<li>判断$s_{0, 1, 2, …, n - nxt[n] - 1} = s_{nxt[n], nxt[n] + 1, …, n - 1}$是否成立。若成立，则可以根据nxt数组最长公共前后缀的定义不断进行递推(建议画图理解)，可得原字符串是有循环节的。</li>
+<li>这里列出一个例子：$abcabcab$，根据2，他的可能最小循环节长度为3，但根据3，前后不匹配，故不成立，无循环节</li>
+</ol>
+<p>改进的想法：</p>
+<ol>
+<li>如果这个字符串有循环节，那么可以推出$n - nxt[n]$为最小循环节的长度</li>
+<li>$n - nxt[n]$是字符串可能的最小循环节</li>
+<li>(不同点) 若字符串去掉可能的前后两个最小循环节后，剩下的部分可被$n - nxt[n]$整除，根据nxt数组最长公共前后缀的定义，可由最前面的循环节不断向下推出后面出现的都是相同的循环节。只需判断$n$是否能被$(n - nxt[n])$整除，故大大简化了复杂度。</li>
+<li>譬如$aaaaaaaaaabaaaaaaaaaa$这样的数据会把上一个算法卡成$O(n^2)$，下一个想法O(n)</li>
+</ol>
+<p>参考代码：<br><div><div class="fold_hider"><div class="close hider_title">点击显/隐代码</div></div><div class="fold">
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">"%s"</span>, s))&#123;</span><br><span class="line">    getnxt(s, nxt);</span><br><span class="line">    <span class="keyword">int</span> n = <span class="built_in">strlen</span>(s);</span><br><span class="line">    <span class="keyword">int</span> len = n - nxt[n];</span><br><span class="line">    <span class="keyword">int</span> flag = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, j = nxt[n]; j &lt; n; i++, j++)&#123;</span><br><span class="line">        <span class="keyword">if</span> (s[i] != s[j])&#123;</span><br><span class="line">            flag = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, (!flag)? n / len: <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div></div></p>
+<p>这类问题大致就是这个思路，根据题意改改细节就都能过了</p>
+<h1 id="最长公共子串问题"><a href="#最长公共子串问题" class="headerlink" title="最长公共子串问题"></a>最长公共子串问题</h1><p>思路：对第一个字符串的子串进行暴力枚举，判断其他字符串中是否存在</p>
+<p>细节：根据不完全测定，C++STL中的string类(str1.find(str2))是最快的，其次是字符串哈希，最后才是kmp。(wtf?)</p>
+<p><del>学kmp也就图一乐，真正查找子串还得看string.find()</del></p>
+<h1 id="最长回文串问题"><a href="#最长回文串问题" class="headerlink" title="最长回文串问题"></a>最长回文串问题</h1><p>manacher算法，根据题意修改细节</p>
+<p>有价值做题：</p>
+<ol>
+<li><a href="https://vjudge.net/problem/HDU-4513" target="_blank" rel="noopener">hdu4513</a>。需要修改一点点的manacher模板</li>
+<li><a href="https://vjudge.net/problem/POJ-3376" target="_blank" rel="noopener">poj3376</a>。哎，不说了，poj的题好恶心</li>
+<li>好像就这两题，kuangbin这个专题其他的manacher好像都是模板(水)题。</li>
+</ol>
+<h1 id="一些感想"><a href="#一些感想" class="headerlink" title="一些感想"></a>一些感想</h1><p>目前基本绿了这个专题。没绿的三题分别是一个已关闭交不了题的OJ，poj的3376，以及一个看上去是个模拟的题。</p>
+<p>u1s1poj的那题是真的恶心，开map复杂度裂开，poj又不支持unordered_map。最后只能写字典树查找。而且，卡string，无奈换回字符数组。然后因为不知道哪里常数没写好tle了无数发。现在已经不会写了。</p>
 
       
     </div>
@@ -339,8 +373,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/07/04/Trie_Tree/" rel="next" title="Trie Tree">
-                <i class="fa fa-chevron-left"></i> Trie Tree
+              <a href="/2020/07/22/%E5%AF%B9%E6%8B%8D/" rel="next" title="对拍">
+                <i class="fa fa-chevron-left"></i> 对拍
               </a>
             
           </div>
@@ -348,10 +382,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/07/07/%E4%B8%83%E6%9C%88%E5%88%9D%E5%88%B7%E9%A2%98%E9%9B%86/" rel="prev" title="七月初刷题集">
-                七月初刷题集 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -406,8 +436,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -453,6 +492,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#循环节问题"><span class="nav-number">1.</span> <span class="nav-text">循环节问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最长公共子串问题"><span class="nav-number">2.</span> <span class="nav-text">最长公共子串问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最长回文串问题"><span class="nav-number">3.</span> <span class="nav-text">最长回文串问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些感想"><span class="nav-number">4.</span> <span class="nav-text">一些感想</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -654,7 +709,46 @@
         guest_info:guest,
         pageSize:'10' || 10,
     });
-  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config("");
 </script>
@@ -672,25 +766,6 @@
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
   
 
 
