@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff4d;
+  background: #a66900;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3124,7 +3124,7 @@ pre .javascript .function {
 }
 @media screen and (min-width: 1200px) {
   body {
-    background-image: url("/images/background/hill_of_winter.jpg");
+    background-image: url("/images/background/grey.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 50%;
