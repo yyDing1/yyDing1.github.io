@@ -373,6 +373,154 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/14/hdu8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="超Carry的dyy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dyy's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/14/hdu8/" itemprop="url">HDU Multi University Training 2020 Stage 8</a></h1>
+        
+
+        <div class="post-meta">
+          
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-14T00:02:35+08:00">
+                2020-08-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/08/14/hdu8/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/08/14/hdu8/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1011-Kidnapper’s-Matching-Problem"><a href="#1011-Kidnapper’s-Matching-Problem" class="headerlink" title="1011.Kidnapper’s Matching Problem"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6865" target="_blank" rel="noopener">1011.Kidnapper’s Matching Problem</a></h1><ul>
+<li>线性基 + kmp</li>
+</ul>
+<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>给定一个长度为n的数组$a$，一个长度为m的模式数组$b$以及另一个数组$S$，定义</p>
+<script type="math/tex; mode=display">2_{\bigoplus}^{S} = \{t | t = \bigoplus_{w\in X}{w}, X \in S\}(\bigoplus: bitwise Xor)</script><p>用模式数组$b$去匹配$a$(即对于所有的$l \in[1, n - m + 1]$，匹配$[b_1, b_2, …, b_m]$和$[a_l, a_{l + 1}, …, a_{l + m - 1}]$)，匹配成功的条件为:</p>
+<script type="math/tex; mode=display">a_{l + i - 1}\bigoplus b_i\in 2_{\bigoplus}^{S}\quad for\quad all\quad 1\leq i \leq m</script><p>求：<br>$\sum_{i = 1}^{n - m + 1}[(a_1, a_2, …, a_{i + m - 1})\quad matches\quad b]\times 2^{i - 1}\quad mod\quad (10^9 + 7)$</p>
+<h2 id="关于线性基"><a href="#关于线性基" class="headerlink" title="关于线性基"></a>关于线性基</h2><p>个人理解线性基类似于质因数分解中的数与每个素数的关系，每个素数互不相交并且能表示任意一个数。</p>
+<p>线性基具有的性质：</p>
+<ol>
+<li>每个基的最高位均不相同</li>
+<li>基数之间不能互相表示，即线性基中不存在$a\bigoplus b=c$</li>
+<li>线性基的数量是一定的，但是值不是一定的</li>
+<li>求解线性基的思路类似于贪心的思想</li>
+</ol>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>求出线性基，用线性基对$a$和$b$的影响，接下来问题就变成了模式串匹配问题，跑一遍$kmp$即可。</p>
+<h2 id="AC-code"><a href="#AC-code" class="headerlink" title="AC code"></a>AC code</h2><div><div class="fold_hider"><div class="close hider_title">点击显/隐代码</div></div><div class="fold">
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> P = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line"><span class="function">ll <span class="title">gcd</span><span class="params">(ll a, ll b)</span></span>&#123;<span class="keyword">return</span> b? gcd(b, a % b): a;&#125;</span><br><span class="line"><span class="function">ll <span class="title">quickpow</span><span class="params">(ll a, ll b)</span></span>&#123;ll res = <span class="number">1</span>; <span class="keyword">while</span>(b)&#123;<span class="keyword">if</span> (b &amp; <span class="number">1</span>) res = res * a; a = a * a; b &gt;&gt;= <span class="number">1</span>;&#125; <span class="keyword">return</span> res;&#125;</span><br><span class="line"><span class="comment">// head</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">2e5</span> + <span class="number">5</span>, M = <span class="number">5e4</span> + <span class="number">5</span>, K = <span class="number">6e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> p[<span class="number">33</span>];</span><br><span class="line"><span class="keyword">int</span> t, n, m, k;</span><br><span class="line"><span class="keyword">int</span> a[N], b[M], s[K], match[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">29</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="keyword">if</span> ((x &gt;&gt; i) &amp; <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (p[i]) x ^= p[i];</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                p[i] = x;</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">convert</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">29</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="keyword">if</span> ((x &gt;&gt; i) &amp; <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (p[i]) x ^= p[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> nxt[M];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getnxt</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">-1</span>;</span><br><span class="line">    nxt[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span> (i &lt; m) &#123;</span><br><span class="line">        <span class="keyword">if</span> (j == <span class="number">-1</span> || b[i] == b[j])&#123;</span><br><span class="line">            nxt[++i] = ++j;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            j = nxt[j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">kmpSearch</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    getnxt();</span><br><span class="line">    <span class="comment">// cout &lt;&lt; "nxt: ";</span></span><br><span class="line">    <span class="comment">// for (int i = 0; i &lt;= m; i++) cout &lt;&lt; nxt[i] &lt;&lt; " "; cout &lt;&lt; endl;</span></span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">fill</span>(match, match + n + <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span> (i &lt; n) &#123;</span><br><span class="line">        <span class="keyword">if</span> (j == <span class="number">-1</span> || a[i] == b[j]) &#123;</span><br><span class="line">            ++i; ++j;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            j = nxt[j];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (j == m) &#123;</span><br><span class="line">            match[i - j] = <span class="number">1</span>;</span><br><span class="line">            j = nxt[j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;t);</span><br><span class="line">    <span class="keyword">while</span> (t--) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;n, &amp;m, &amp;k);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;b[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">memset</span>(p, <span class="number">0</span>, <span class="keyword">sizeof</span>(p));</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;s[i]);</span><br><span class="line">            insert(s[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            a[i] = convert(a[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">            b[i] = convert(b[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// cout &lt;&lt; "p: ";</span></span><br><span class="line">        <span class="comment">// for (int i = 29; i &gt;= 0; i--) &#123;</span></span><br><span class="line">        <span class="comment">//     if (p[i]) cout &lt;&lt; p[i] &lt;&lt; " ";</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        <span class="comment">// cout &lt;&lt; endl;</span></span><br><span class="line">        <span class="comment">// for (int i = 0; i &lt; n; i++) cout &lt;&lt; a[i] &lt;&lt; " "; cout &lt;&lt; endl;</span></span><br><span class="line">        <span class="comment">// for (int i = 0; i &lt; m; i++) cout &lt;&lt; b[i] &lt;&lt; " "; cout &lt;&lt; endl;</span></span><br><span class="line">        kmpSearch();</span><br><span class="line">        <span class="comment">// for (int i = 0; i &lt; n; i++) cout &lt;&lt; match[i] &lt;&lt; " "; cout &lt;&lt; endl;</span></span><br><span class="line">        <span class="keyword">int</span> base = <span class="number">1</span>, ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">            ans += base * match[i];</span><br><span class="line">            ans %= P;</span><br><span class="line">            base *= <span class="number">2</span>;</span><br><span class="line">            base %= P;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// system("pause");</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div></div>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/12/no_title/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1456,141 +1604,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/01/%E4%B8%8D%E7%9F%A5%E9%81%93%E5%8F%96%E4%BB%80%E4%B9%88%E6%A0%87%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="超Carry的dyy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dyy's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/07/01/%E4%B8%8D%E7%9F%A5%E9%81%93%E5%8F%96%E4%BB%80%E4%B9%88%E6%A0%87%E9%A2%98/" itemprop="url">不知道取什么标题</a></h1>
-        
-
-        <div class="post-meta">
-          
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-01T22:10:15+08:00">
-                2020-07-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/07/01/%E4%B8%8D%E7%9F%A5%E9%81%93%E5%8F%96%E4%BB%80%E4%B9%88%E6%A0%87%E9%A2%98/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/07/01/%E4%B8%8D%E7%9F%A5%E9%81%93%E5%8F%96%E4%BB%80%E4%B9%88%E6%A0%87%E9%A2%98/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>这是一篇没有有用内容的博客。<br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/07/01/%E4%B8%8D%E7%9F%A5%E9%81%93%E5%8F%96%E4%BB%80%E4%B9%88%E6%A0%87%E9%A2%98/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1645,7 +1658,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
