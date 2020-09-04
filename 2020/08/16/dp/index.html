@@ -79,19 +79,17 @@
 
 
 
-<meta name="description" content="这是一篇没有有用内容的博客。">
+<meta name="description" content="硬币问题HDU2069 Coin Change 注意题目要求最多100个硬币，故100个硬币以上的情况要省略。 因需考虑硬币数量，所以每次状态转移要记录硬币数量。 只需考虑$i$个硬币由$i - 1$个硬币转移而来的情况。  AC Code点击显&#x2F;隐代码 123456789101112131415161718192021222324252627282930313233343536#include&amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="不知道取什么标题">
-<meta property="og:url" content="http://yoursite.com/2020/07/01/%E4%B8%8D%E7%9F%A5%E9%81%93%E5%8F%96%E4%BB%80%E4%B9%88%E6%A0%87%E9%A2%98/index.html">
+<meta property="og:title" content="dp">
+<meta property="og:url" content="http://yoursite.com/2020/08/16/dp/index.html">
 <meta property="og:site_name" content="Dyy&#39;s blog">
-<meta property="og:description" content="这是一篇没有有用内容的博客。">
+<meta property="og:description" content="硬币问题HDU2069 Coin Change 注意题目要求最多100个硬币，故100个硬币以上的情况要省略。 因需考虑硬币数量，所以每次状态转移要记录硬币数量。 只需考虑$i$个硬币由$i - 1$个硬币转移而来的情况。  AC Code点击显&#x2F;隐代码 123456789101112131415161718192021222324252627282930313233343536#include&amp;">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/07/01/%E4%B8%8D%E7%9F%A5%E9%81%93%E5%8F%96%E4%BB%80%E4%B9%88%E6%A0%87%E9%A2%98/%E5%BF%83%E7%B4%AF.jpg">
-<meta property="article:published_time" content="2020-07-01T14:10:15.000Z">
-<meta property="article:modified_time" content="2020-07-10T09:46:59.687Z">
+<meta property="article:published_time" content="2020-08-16T02:52:14.000Z">
+<meta property="article:modified_time" content="2020-08-21T14:35:51.550Z">
 <meta property="article:author" content="超Carry的dyy">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/07/01/%E4%B8%8D%E7%9F%A5%E9%81%93%E5%8F%96%E4%BB%80%E4%B9%88%E6%A0%87%E9%A2%98/%E5%BF%83%E7%B4%AF.jpg">
 
 
 
@@ -121,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/07/01/不知道取什么标题/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/08/16/dp/"/>
 
 
 
 
 
-  <title>不知道取什么标题 | Dyy's blog</title>
+  <title>dp | Dyy's blog</title>
   
 
 
@@ -234,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/01/%E4%B8%8D%E7%9F%A5%E9%81%93%E5%8F%96%E4%BB%80%E4%B9%88%E6%A0%87%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/16/dp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="超Carry的dyy">
@@ -251,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">不知道取什么标题</h1>
+          <h1 class="post-title" itemprop="name headline">dp</h1>
         
 
         <div class="post-meta">
@@ -264,8 +262,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-01T22:10:15+08:00">
-                2020-07-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-16T10:52:14+08:00">
+                2020-08-16
               </time>
             
 
@@ -283,8 +281,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/07/01/%E4%B8%8D%E7%9F%A5%E9%81%93%E5%8F%96%E4%BB%80%E4%B9%88%E6%A0%87%E9%A2%98/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/07/01/%E4%B8%8D%E7%9F%A5%E9%81%93%E5%8F%96%E4%BB%80%E4%B9%88%E6%A0%87%E9%A2%98/" itemprop="commentCount"></span>
+                <a href="/2020/08/16/dp/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/08/16/dp/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -312,13 +310,22 @@
       
 
       
-        <p>这是一篇没有有用内容的博客。<br><a id="more"></a></p>
-<p>上一个博文的表格都是图片的形式。究其原因，是mathjax和Markdown的制表符有些不兼容。我想显示数学公式，结果制表符就被转义了显示不了表格；我想显示表格，结果数学公式就是一堆乱码。最后直接用图片了。</p>
-<p><del>希望有大佬能教教我，或者推荐一款能兼容Markdown的数学公式软件。</del></p>
-<p>看大佬们用的$LaTeX$，有free time的话可以考虑学一下。<del>我是懒狗</del></p>
-<p>复习完数据结构感觉信心满满，结果时间不太够。选择题选择性失明，直接拉胯。</p>
-<p><img src="/2020/07/01/%E4%B8%8D%E7%9F%A5%E9%81%93%E5%8F%96%E4%BB%80%E4%B9%88%E6%A0%87%E9%A2%98/心累.jpg" alt></p>
-
+        <h1 id="硬币问题"><a href="#硬币问题" class="headerlink" title="硬币问题"></a>硬币问题</h1><h2 id="HDU2069-Coin-Change"><a href="#HDU2069-Coin-Change" class="headerlink" title="HDU2069 Coin Change"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2069" target="_blank" rel="noopener">HDU2069 Coin Change</a></h2><ul>
+<li>注意题目要求最多100个硬币，故100个硬币以上的情况要省略。</li>
+<li>因需考虑硬币数量，所以每次状态转移要记录硬币数量。</li>
+<li>只需考虑$i$个硬币由$i - 1$个硬币转移而来的情况。</li>
+</ul>
+<h2 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a>AC Code</h2><div><div class="fold_hider"><div class="close hider_title">点击显/隐代码</div></div><div class="fold">
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; P;</span><br><span class="line"><span class="function">ll <span class="title">gcd</span><span class="params">(ll a, ll b)</span></span>&#123;<span class="keyword">return</span> b? gcd(b, a % b): a;&#125;</span><br><span class="line"><span class="function">ll <span class="title">quickpow</span><span class="params">(ll a, ll b)</span></span>&#123;ll res = <span class="number">1</span>; <span class="keyword">while</span>(b)&#123;<span class="keyword">if</span> (b &amp; <span class="number">1</span>) res = res * a; a = a * a; b &gt;&gt;= <span class="number">1</span>;&#125; <span class="keyword">return</span> res;&#125;</span><br><span class="line"><span class="comment">// head</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> ty[] = &#123;<span class="number">1</span>, <span class="number">5</span>, <span class="number">10</span>, <span class="number">25</span>, <span class="number">50</span>&#125;;</span><br><span class="line"><span class="comment">// use i coin to gather j</span></span><br><span class="line"><span class="keyword">int</span> dp[<span class="number">101</span>][<span class="number">251</span>];</span><br><span class="line"><span class="keyword">int</span> ans[<span class="number">251</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> tt = <span class="number">0</span>; tt &lt; <span class="number">5</span>; tt++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">100</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = ty[tt]; j &lt;= <span class="number">250</span>; j++) &#123;</span><br><span class="line">                dp[i][j] += dp[i - <span class="number">1</span>][j - ty[tt]];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= <span class="number">250</span>; j++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">100</span>; i++) &#123;</span><br><span class="line">            ans[j] += dp[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    solve();</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n)) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans[n]);</span><br><span class="line">    <span class="comment">// system("pause");</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div></div>
+<h1 id="HDU1074"><a href="#HDU1074" class="headerlink" title="HDU1074"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1074" target="_blank" rel="noopener">HDU1074</a></h1><h1 id="HDU1176"><a href="#HDU1176" class="headerlink" title="HDU1176"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1176" target="_blank" rel="noopener">HDU1176</a></h1><p>假设成每一个数据(x, t)都对应x-t坐标系上的一个点<br>对于其中的任意两个点a(x1, t1)可到达b(x2, t2)的条件为</p>
+<ul>
+<li>t2 &gt; t1且(t2 - t1) / abs(x2 - x1) &gt;= 1</li>
+<li>斜率不存在</li>
+<li>两点重合<br>以上三种情况可以归结为：</li>
+<li>x2 + t2 &gt;= x1 + t1且t2 - x2 &gt;= t1 - x1<br>问题转化为找满足上式的最多的点<br>储存每个点的值arr[i].first = t + x, arr[i].second = t - x<br>以arr[i].first为第一关键字, arr[i].second为第二关键字升序排序<br>找所有的arr[i].second组成的数组的最长上升子序列(包含相等)</li>
+</ul>
+<h1 id="HDU1257"><a href="#HDU1257" class="headerlink" title="HDU1257"></a><a href>HDU1257</a></h1><h1 id="HDU1015"><a href="#HDU1015" class="headerlink" title="HDU1015"></a><a href>HDU1015</a></h1>
       
     </div>
     
@@ -342,8 +349,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/06/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" rel="next" title="数据结构期末复习">
-                <i class="fa fa-chevron-left"></i> 数据结构期末复习
+              <a href="/2020/08/14/hdu8/" rel="next" title="HDU Multi University Training 2020 Stage 8">
+                <i class="fa fa-chevron-left"></i> HDU Multi University Training 2020 Stage 8
               </a>
             
           </div>
@@ -351,10 +358,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/07/04/Trie_Tree/" rel="prev" title="Trie Tree">
-                Trie Tree <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -409,8 +412,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -456,6 +468,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#硬币问题"><span class="nav-number">1.</span> <span class="nav-text">硬币问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HDU2069-Coin-Change"><span class="nav-number">1.1.</span> <span class="nav-text">HDU2069 Coin Change</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-Code"><span class="nav-number">1.2.</span> <span class="nav-text">AC Code</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HDU1074"><span class="nav-number">2.</span> <span class="nav-text">HDU1074</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HDU1176"><span class="nav-number">3.</span> <span class="nav-text">HDU1176</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HDU1257"><span class="nav-number">4.</span> <span class="nav-text">HDU1257</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HDU1015"><span class="nav-number">5.</span> <span class="nav-text">HDU1015</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
