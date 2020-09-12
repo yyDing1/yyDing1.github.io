@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="kmp,manacher,Codeforces,hash," />
 
 
 
@@ -87,8 +87,12 @@
 <meta property="og:description" content="主要是codeforces 1600 - 2000的题，牛客那题是赛场自闭后来看题解补的。不得不说这些题还是有点烧脑子的Orz。题已设置超链接。 emmmm，感觉字符串的题真的很神奇。 感觉将算法写成博客太费时间了，而且现在也只是初学阶段，也没有大量做题，也没什么特别的理解，打算以后再写(主要是刚学应该一时半会忘不掉)。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-16T12:26:35.000Z">
-<meta property="article:modified_time" content="2020-07-17T08:58:32.244Z">
+<meta property="article:modified_time" content="2020-09-12T08:38:55.291Z">
 <meta property="article:author" content="超Carry的dyy">
+<meta property="article:tag" content="kmp">
+<meta property="article:tag" content="manacher">
+<meta property="article:tag" content="Codeforces">
+<meta property="article:tag" content="hash">
 <meta name="twitter:card" content="summary">
 
 
@@ -181,7 +185,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -190,8 +194,28 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
-          <a href="/archives/%20" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -272,6 +296,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/strings/" itemprop="url" rel="index">
+                    <span itemprop="name">strings</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -434,6 +480,18 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/kmp/" rel="tag"># kmp</a>
+          
+            <a href="/tags/manacher/" rel="tag"># manacher</a>
+          
+            <a href="/tags/Codeforces/" rel="tag"># Codeforces</a>
+          
+            <a href="/tags/hash/" rel="tag"># hash</a>
+          
+        </div>
+      
 
       
       
@@ -537,16 +595,34 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%20%7C%7C%20archive">
+                <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
             
 
           </nav>
