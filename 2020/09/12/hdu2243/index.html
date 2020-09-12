@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="poj2778的升级版感觉是个神题 题目大意给定一些词根，计算长度L以内至少含有一个词根的单词有多少个 解题思路 考虑不含这些词的单词总数。 AC自动机建图，将每个单词结尾的节点标记, 将标记点排除在外。 由trie图建出邻接矩阵mat，每走一步相当于乘一个trie图的邻接矩阵。 出发地为i，s步之后到达j的路线总数为$mat^{s}[i][j]$。 显然只需统计$\sum_{i &#x3D; 0}^{di">
+<meta name="description" content="poj2778的升级版感觉是个神题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="poj2778">
 <meta property="og:url" content="http://yoursite.com/2020/09/12/hdu2243/index.html">
 <meta property="og:site_name" content="Dyy&#39;s blog">
-<meta property="og:description" content="poj2778的升级版感觉是个神题 题目大意给定一些词根，计算长度L以内至少含有一个词根的单词有多少个 解题思路 考虑不含这些词的单词总数。 AC自动机建图，将每个单词结尾的节点标记, 将标记点排除在外。 由trie图建出邻接矩阵mat，每走一步相当于乘一个trie图的邻接矩阵。 出发地为i，s步之后到达j的路线总数为$mat^{s}[i][j]$。 显然只需统计$\sum_{i &#x3D; 0}^{di">
+<meta property="og:description" content="poj2778的升级版感觉是个神题">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-12T09:01:09.000Z">
-<meta property="article:modified_time" content="2020-09-12T09:21:36.646Z">
+<meta property="article:modified_time" content="2020-09-12T10:48:56.195Z">
 <meta property="article:author" content="超Carry的dyy">
 <meta property="article:tag" content="AC自动机">
 <meta property="article:tag" content="矩阵快速幂">
@@ -355,6 +355,7 @@
 
       
         <p><a href="https://vjudge.net/problem/POJ-2778" target="_blank" rel="noopener">poj2778</a>的升级版<br>感觉是个神题</p>
+<a id="more"></a>
 <h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>给定一些词根，计算长度L以内至少含有一个词根的单词有多少个</p>
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ul>
 <li>考虑不含这些词的单词总数。</li>
