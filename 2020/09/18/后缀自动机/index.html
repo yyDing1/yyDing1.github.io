@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="对拍程序," />
+  <meta name="keywords" content="SAM,strings,basic knowledge," />
 
 
 
@@ -79,21 +79,23 @@
 
 
 
-<meta name="description" content="简易记录版，以后完善内容 很多时候你的程序wa了但是很难去找到一组反例进而优化自己的思路。但是如果自己手动不断生成随机数的话又显得十分的慢，浪费时间。对拍程序可以很好的解决这个困扰。 自闭了一个下午才去学的$qwq$ 下面是我从apiadu的实况中steal来的对排版子(略有修改) dlstxdy Orz">
+<meta name="description" content="后缀自动机学习笔记 学习来源：hihocoder1441">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对拍">
-<meta property="og:url" content="http://yoursite.com/2020/07/22/%E5%AF%B9%E6%8B%8D/index.html">
+<meta property="og:title" content="后缀自动机">
+<meta property="og:url" content="http://yoursite.com/2020/09/18/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA/index.html">
 <meta property="og:site_name" content="Dyy&#39;s blog">
-<meta property="og:description" content="简易记录版，以后完善内容 很多时候你的程序wa了但是很难去找到一组反例进而优化自己的思路。但是如果自己手动不断生成随机数的话又显得十分的慢，浪费时间。对拍程序可以很好的解决这个困扰。 自闭了一个下午才去学的$qwq$ 下面是我从apiadu的实况中steal来的对排版子(略有修改) dlstxdy Orz">
+<meta property="og:description" content="后缀自动机学习笔记 学习来源：hihocoder1441">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/07/22/%E5%AF%B9%E6%8B%8D/dls%E7%9A%84%E5%AF%B9%E6%8B%8D.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/22/%E5%AF%B9%E6%8B%8D/%E6%88%91%E7%9A%84%E5%AF%B9%E6%8B%8D.png">
-<meta property="article:published_time" content="2020-07-22T13:42:51.000Z">
-<meta property="article:modified_time" content="2020-09-12T08:31:00.586Z">
+<meta property="og:image" content="http://yoursite.com/2020/09/18/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA%E4%BE%8B.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/18/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA/list.png">
+<meta property="article:published_time" content="2020-09-18T03:19:01.000Z">
+<meta property="article:modified_time" content="2020-09-18T08:04:01.904Z">
 <meta property="article:author" content="超Carry的dyy">
-<meta property="article:tag" content="对拍程序">
+<meta property="article:tag" content="SAM">
+<meta property="article:tag" content="strings">
+<meta property="article:tag" content="basic knowledge">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/07/22/%E5%AF%B9%E6%8B%8D/dls%E7%9A%84%E5%AF%B9%E6%8B%8D.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/09/18/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA%E4%BE%8B.png">
 
 
 
@@ -123,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/07/22/对拍/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/09/18/后缀自动机/"/>
 
 
 
 
 
-  <title>对拍 | Dyy's blog</title>
+  <title>后缀自动机 | Dyy's blog</title>
   
 
 
@@ -256,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/22/%E5%AF%B9%E6%8B%8D/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/18/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="超Carry的dyy">
@@ -273,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">对拍</h1>
+          <h1 class="post-title" itemprop="name headline">后缀自动机</h1>
         
 
         <div class="post-meta">
@@ -286,8 +288,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-22T21:42:51+08:00">
-                2020-07-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-18T11:19:01+08:00">
+                2020-09-18
               </time>
             
 
@@ -309,8 +311,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%85%B6%E4%BB%96/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
+                  <a href="/categories/SAM/" itemprop="url" rel="index">
+                    <span itemprop="name">SAM</span>
                   </a>
                 </span>
 
@@ -327,8 +329,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/07/22/%E5%AF%B9%E6%8B%8D/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/07/22/%E5%AF%B9%E6%8B%8D/" itemprop="commentCount"></span>
+                <a href="/2020/09/18/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/09/18/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -356,56 +358,27 @@
       
 
       
-        <p>简易记录版，以后完善内容</p>
-<p>很多时候你的程序wa了但是很难去找到一组反例进而优化自己的思路。但是如果自己手动不断生成随机数的话又显得十分的慢，浪费时间。对拍程序可以很好的解决这个困扰。</p>
-<p>自闭了一个下午才去学的$qwq$</p>
-<p>下面是我从apiadu的实况中steal来的对排版子(略有修改) dlstxdy Orz</p>
+        <p>后缀自动机学习笔记</p>
+<p>学习来源：<a href="http://hihocoder.com/problemset/problem/1441" target="_blank" rel="noopener">hihocoder1441</a></p>
 <a id="more"></a>
-<h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>正确的暴力程序相对于题解程序来说还是相对好写很多的。</p>
-<p>就是用暴力程序的输出去对比另外一个程序的输出去找bug。</p>
-<h1 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h1><p>dls的对拍是由Python文件和C++程序共同构成的(当然只用cpp也可以网上都有教程)</p>
-<ol>
-<li>gen.py：随机数生成器，Python的随机数好写也好用</li>
-<li>bFE.cpp：正确的程序(brute force)，只要确保程序对就行，不用太关注复杂度</li>
-<li>my.cpp：满足题目复杂度的程序，也是待检测正确性的程序</li>
-<li>pai.py：可以理解为一个控制台，将gen.py生成的数据读入bFE.cpp和my.cpp，并比对生成的答案</li>
-<li>这些文件都储存在一个文件夹(duipai)下</li>
-</ol>
-<p>优势在于pai.py里面可以写循环，从而实现只要两个程序输出一样就一直运行下去(当然可以手动停止)，直到遇到两个程序的输出不一样的情况(wa)。gen.py生成的数据范围尽量小一些，方便运行也方便找错。</p>
-<h1 id="gen-py"><a href="#gen-py" class="headerlink" title="gen.py"></a>gen.py</h1><p>没什么好说的，就是根据题目的要求生成随机的数据</p>
-<p>比如说我要生成一个长度10以内的字符串(根据个人需要去调数值)。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">generate_string</span><span class="params">(l)</span>:</span></span><br><span class="line">    n = randint(<span class="number">1</span>, l)</span><br><span class="line">    s = <span class="string">""</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        s += chr(ord(<span class="string">'a'</span>) + randint(<span class="number">0</span>, <span class="number">25</span>))</span><br><span class="line">    <span class="keyword">return</span> s</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">t = randint(<span class="number">1</span>, <span class="number">20</span>)</span><br><span class="line">print(<span class="number">1</span>)</span><br><span class="line">print(generate_string(<span class="number">10</span>))</span><br></pre></td></tr></table></figure>
-<h1 id="pai-py"><a href="#pai-py" class="headerlink" title="pai.py"></a>pai.py</h1><p>调用Python的操作系统包(我理解为相当于在cmd里面执行)</p>
-<p>下图是dls的对拍</p>
-<p><img src="/2020/07/22/%E5%AF%B9%E6%8B%8D/dls的对拍.png" alt="dls的对拍"></p>
-<p>但dls的电脑用是类似于Linus的终端，和Windows的cmd不一样。我查阅了一波，针对Windows的cmd做了一些修改。但是time(程序计时)没有找到对应的Windows指令$qwq$。(有没有懂哥教教我)</p>
-<p>值得注意的是cpp文件必须事先经过编译生成对应的exe文件。这里调用也是调用的是exe文件。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tc = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    os.system(<span class="string">"python gen.py &gt; A.in"</span>) <span class="comment"># 生成数据, 存入A.in(自动生成)</span></span><br><span class="line">    os.system(<span class="string">"my.exe &lt; A.in &gt; std.out"</span>) <span class="comment"># 读取A.in中的数据, 跑my程序, 结果储存到std.out(自动生成)</span></span><br><span class="line">    os.system(<span class="string">"bFE.exe &lt; A.in &gt; bf.out"</span>) <span class="comment"># 读取A.in中的数据, 跑my程序, 结果储存到bf.out(自动生成)</span></span><br><span class="line">    <span class="keyword">if</span> os.system(<span class="string">"fc bf.out std.out"</span>):</span><br><span class="line">        <span class="comment"># 如果文件内容不一样, 输出"wa"直接返回</span></span><br><span class="line">        print(<span class="string">"WA"</span>)</span><br><span class="line">        exit(<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># 否则继续运行</span></span><br><span class="line">        tc += <span class="number">1</span></span><br><span class="line">        print(<span class="string">"AC #"</span>, tc)</span><br><span class="line">    os.system(<span class="string">"type bf.out"</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="如何运行"><a href="#如何运行" class="headerlink" title="如何运行"></a>如何运行</h1><p>要用到Windows的cmd</p>
-<ol>
-<li>首先win + R然后输入cmd，回车，打开终端</li>
-<li><p>打开pai所在的文件</p>
- <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> .../pai/</span><br></pre></td></tr></table></figure>
-<p> 比如说我的路径是桌面(Desktop)/cppspace/duipai</p>
- <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> Desktop/cppspace/duipai/</span><br></pre></td></tr></table></figure>
-<p> cd：打开</p>
-</li>
-<li><p>然后运行pai.py文件</p>
- <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python pai.py</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>完成，程序就可以一直run了(ctrl + C手动停止)</p>
-</li>
-</ol>
-<h1 id="other-tips"><a href="#other-tips" class="headerlink" title="other tips"></a>other tips</h1><ul>
-<li>如果wa了，最后一组数据以及相应的输出可以在对应的.in和 .out文件里找到</li>
-<li>.in, .out可以直接用记事本打开</li>
-<li>你也可以直接运行pai.py文件，根据需要改吧</li>
-<li>以上程序的名字随意改，只要各个地方同步一下就行</li>
-<li>记得对拍前要将程序编译(只要你改了程序都要重新编译)</li>
-<li>最后放一张我的运行截图<br><img src="/2020/07/22/%E5%AF%B9%E6%8B%8D/我的对拍.png" alt="运行截图"></li>
-<li>真好啊，第三个点就wa了$qwq$</li>
-<li>这样是不是大大减少了我们<del>自闭</del>的时间呢$qwq$</li>
+<h1 id="基本描述"><a href="#基本描述" class="headerlink" title="基本描述"></a>基本描述</h1><blockquote>
+<p>对于一个字符串$S$，它对应的后缀自动机是一个最小的确定有限状态自动机（DFA），接受且只接受$S$的后缀。<br>DFA：DFA可以用一个五元组 &lt;字符集，状态集，转移函数、起始状态、终结状态集&gt;来表示。</p>
+</blockquote>
+<p>对于字符串$S=aabbabd$，它的后缀自动机是：<br><img src="/2020/09/18/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA/后缀自动机例.png" alt="aabbabd"></p>
+<h1 id="SAM的state-上例"><a href="#SAM的state-上例" class="headerlink" title="SAM的state(上例)"></a>SAM的state(上例)</h1><p><img src="/2020/09/18/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA/list.png" alt></p>
+<p>状态分类的方法(原则)：把S的所有子串的$endpos$都求出来。如果两个子串的$endpos$相等，就把这两个子串归为一类。</p>
+<p>学习过程中一个错误的理解：只会$len(substrings) = 1$，$endpos &gt; 1$ 或$len(substrings) &gt; 1$，$endpos = 1$的情况，也就是说只需合成一次。这种想法是错误的，反例为$abcabc$，要严格按照上述分状态的方法，事实上有些状态是要合成很多次的。</p>
+<p>详见1441的提交记录</p>
+<h2 id="暴力AC代码"><a href="#暴力AC代码" class="headerlink" title="暴力AC代码"></a>暴力AC代码</h2><div><div class="fold_hider"><div class="close hider_title">点击显/隐代码</div></div><div class="fold">
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; P;</span><br><span class="line"><span class="function">ll <span class="title">gcd</span><span class="params">(ll a, ll b)</span></span>&#123;<span class="keyword">return</span> b? gcd(b, a % b): a;&#125;</span><br><span class="line"><span class="function">ll <span class="title">quickpow</span><span class="params">(ll a, ll b)</span></span>&#123;ll res = <span class="number">1</span>; <span class="keyword">while</span>(b)&#123;<span class="keyword">if</span> (b &amp; <span class="number">1</span>) res = res * a; a = a * a; b &gt;&gt;= <span class="number">1</span>;&#125; <span class="keyword">return</span> res;&#125;</span><br><span class="line"><span class="comment">// head</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; mp;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> len = <span class="number">0</span>; i + len &lt;= s.<span class="built_in">size</span>(); len++) &#123;</span><br><span class="line">            mp[s.substr(i, len)].push_back(i + len);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">        <span class="built_in">string</span> l = s, r = s;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> st : mp) &#123;</span><br><span class="line">            <span class="keyword">if</span> (st.second == mp[s]) &#123;</span><br><span class="line">                <span class="keyword">if</span> (st.first.<span class="built_in">size</span>() &lt; l.<span class="built_in">size</span>())</span><br><span class="line">                    l = st.first;</span><br><span class="line">                <span class="keyword">if</span> (st.first.<span class="built_in">size</span>() &gt; r.<span class="built_in">size</span>())</span><br><span class="line">                    r = st.first;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; l &lt;&lt; <span class="string">" "</span> &lt;&lt; r &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> num : mp[s])</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; num &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// system("pause");</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div></div>
+<h1 id="一些性质"><a href="#一些性质" class="headerlink" title="一些性质"></a>一些性质</h1><ul>
+<li>$s1$是$s2$的后缀当且仅当$endpos(s1) \supseteq endpos(s2)$，$s1$不是$s2$的后缀当且仅当$endpos(s1) \cap  endpos(s2) = \phi$</li>
+<li>对于一个状态$st$，以及任意$s\in substrings(st)$，都有$s$是$longest(st)$的后缀</li>
+<li>对于一个状态$st$，以及任意的$longest(st)$的后缀$s$，如果$s$的长度满足：$length(shortest(st)) &lt;= length(s) &lt;= length(longsest(st))$，那么$s\in substrings(st)$</li>
 </ul>
+<h1 id="transition-function"><a href="#transition-function" class="headerlink" title="transition function"></a>transition function</h1><p>我们将$st$遇到的下一个字符集合记作$next(st)$，有$next(st) = \{S[i+1] | i \in  endpos(st)\}$，例如$next(S)=\{S[1], S[2], S[3], S[4], S[5], S[6], S[7]\}=\{a, b, d\}$，$next(8)=\{S[4], S[7]\}=\{b, d\}$</p>
+<p>对于一个状态$st$和一个字符$c\in next(st)$，可以定义转移函数$trans(st, c) = \{x | longest(st) + c \in  substrings(x)\}$</p>
 
       
     </div>
@@ -423,7 +396,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E5%AF%B9%E6%8B%8D%E7%A8%8B%E5%BA%8F/" rel="tag"># 对拍程序</a>
+            <a href="/tags/SAM/" rel="tag"># SAM</a>
+          
+            <a href="/tags/strings/" rel="tag"># strings</a>
+          
+            <a href="/tags/basic-knowledge/" rel="tag"># basic knowledge</a>
           
         </div>
       
@@ -436,8 +413,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/07/16/strings%E5%81%9A%E9%A2%98/" rel="next" title="strings做题">
-                <i class="fa fa-chevron-left"></i> strings做题
+              <a href="/2020/09/15/poj1743/" rel="next" title="poj1743">
+                <i class="fa fa-chevron-left"></i> poj1743
               </a>
             
           </div>
@@ -445,10 +422,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/08/01/kuangbin%E4%B8%93%E9%A2%9816/" rel="prev" title="kuangbin专题十六 KMP & 扩展KMP & Manacher">
-                kuangbin专题十六 KMP & 扩展KMP & Manacher <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -587,7 +560,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简述"><span class="nav-number">1.</span> <span class="nav-text">简述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组成"><span class="nav-number">2.</span> <span class="nav-text">组成</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gen-py"><span class="nav-number">3.</span> <span class="nav-text">gen.py</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pai-py"><span class="nav-number">4.</span> <span class="nav-text">pai.py</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何运行"><span class="nav-number">5.</span> <span class="nav-text">如何运行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#other-tips"><span class="nav-number">6.</span> <span class="nav-text">other tips</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本描述"><span class="nav-number">1.</span> <span class="nav-text">基本描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SAM的state-上例"><span class="nav-number">2.</span> <span class="nav-text">SAM的state(上例)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#暴力AC代码"><span class="nav-number">2.1.</span> <span class="nav-text">暴力AC代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些性质"><span class="nav-number">3.</span> <span class="nav-text">一些性质</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#transition-function"><span class="nav-number">4.</span> <span class="nav-text">transition function</span></a></li></ol></div>
             
 
           </div>
