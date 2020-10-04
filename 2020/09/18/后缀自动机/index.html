@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="后缀自动机学习笔记 学习来源：hihocoder1441">
+<meta name="description" content="后缀自动机学习笔记 学习来源：  hihocoder1441 博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="后缀自动机">
 <meta property="og:url" content="http://yoursite.com/2020/09/18/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA/index.html">
 <meta property="og:site_name" content="Dyy&#39;s blog">
-<meta property="og:description" content="后缀自动机学习笔记 学习来源：hihocoder1441">
+<meta property="og:description" content="后缀自动机学习笔记 学习来源：  hihocoder1441 博客">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/2020/09/18/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA%E4%BE%8B.png">
 <meta property="og:image" content="http://yoursite.com/2020/09/18/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA/list.png">
 <meta property="article:published_time" content="2020-09-18T03:19:01.000Z">
-<meta property="article:modified_time" content="2020-09-18T08:04:01.904Z">
+<meta property="article:modified_time" content="2020-09-18T11:15:36.254Z">
 <meta property="article:author" content="超Carry的dyy">
 <meta property="article:tag" content="SAM">
 <meta property="article:tag" content="strings">
@@ -359,7 +359,11 @@
 
       
         <p>后缀自动机学习笔记</p>
-<p>学习来源：<a href="http://hihocoder.com/problemset/problem/1441" target="_blank" rel="noopener">hihocoder1441</a></p>
+<p>学习来源：</p>
+<ul>
+<li><a href="http://hihocoder.com/problemset/problem/1441" target="_blank" rel="noopener">hihocoder1441</a></li>
+<li><a href="https://www.cnblogs.com/zjp-shadow/p/9218214.html#autoid-1-0-0" target="_blank" rel="noopener">博客</a></li>
+</ul>
 <a id="more"></a>
 <h1 id="基本描述"><a href="#基本描述" class="headerlink" title="基本描述"></a>基本描述</h1><blockquote>
 <p>对于一个字符串$S$，它对应的后缀自动机是一个最小的确定有限状态自动机（DFA），接受且只接受$S$的后缀。<br>DFA：DFA可以用一个五元组 &lt;字符集，状态集，转移函数、起始状态、终结状态集&gt;来表示。</p>
@@ -373,10 +377,12 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; P;</span><br><span class="line"><span class="function">ll <span class="title">gcd</span><span class="params">(ll a, ll b)</span></span>&#123;<span class="keyword">return</span> b? gcd(b, a % b): a;&#125;</span><br><span class="line"><span class="function">ll <span class="title">quickpow</span><span class="params">(ll a, ll b)</span></span>&#123;ll res = <span class="number">1</span>; <span class="keyword">while</span>(b)&#123;<span class="keyword">if</span> (b &amp; <span class="number">1</span>) res = res * a; a = a * a; b &gt;&gt;= <span class="number">1</span>;&#125; <span class="keyword">return</span> res;&#125;</span><br><span class="line"><span class="comment">// head</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; mp;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> len = <span class="number">0</span>; i + len &lt;= s.<span class="built_in">size</span>(); len++) &#123;</span><br><span class="line">            mp[s.substr(i, len)].push_back(i + len);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">        <span class="built_in">string</span> l = s, r = s;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> st : mp) &#123;</span><br><span class="line">            <span class="keyword">if</span> (st.second == mp[s]) &#123;</span><br><span class="line">                <span class="keyword">if</span> (st.first.<span class="built_in">size</span>() &lt; l.<span class="built_in">size</span>())</span><br><span class="line">                    l = st.first;</span><br><span class="line">                <span class="keyword">if</span> (st.first.<span class="built_in">size</span>() &gt; r.<span class="built_in">size</span>())</span><br><span class="line">                    r = st.first;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; l &lt;&lt; <span class="string">" "</span> &lt;&lt; r &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> num : mp[s])</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; num &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// system("pause");</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </div></div>
 <h1 id="一些性质"><a href="#一些性质" class="headerlink" title="一些性质"></a>一些性质</h1><ul>
-<li>$s1$是$s2$的后缀当且仅当$endpos(s1) \supseteq endpos(s2)$，$s1$不是$s2$的后缀当且仅当$endpos(s1) \cap  endpos(s2) = \phi$</li>
+<li>$s_1$是$s_2$的后缀当且仅当$endpos(s_1) \supseteq endpos(s_2)$，$s_1$不是$s_2$的后缀当且仅当$endpos(s_1) \cap  endpos(s_2) = \phi$</li>
 <li>对于一个状态$st$，以及任意$s\in substrings(st)$，都有$s$是$longest(st)$的后缀</li>
-<li>对于一个状态$st$，以及任意的$longest(st)$的后缀$s$，如果$s$的长度满足：$length(shortest(st)) &lt;= length(s) &lt;= length(longsest(st))$，那么$s\in substrings(st)$</li>
+<li>对于一个状态$st$，以及任意的$longest(st)$的后缀$s$，如果$s$的长度满足：$length(shortest(st)) &lt;= length(s) &lt;= length(longsest(st))$，那么$s\in substrings(st)$，也就是说$substrings(st)$包含的是$longest(st)$的一系列<strong>连续</strong>后缀。</li>
 </ul>
+<h1 id="SAM的后缀链接"><a href="#SAM的后缀链接" class="headerlink" title="SAM的后缀链接"></a>SAM的后缀链接</h1><p>$aabbab$,$abbab$,$bbab$,$bab$的$endpos$都是${6}$，下一个$ab$当然也在结束位置$6$出现过，但是$ab$还在结束位置$3$出现过，所以$ab$比$aabbab$,$abbab$,$bbab$,$bab$出现次数更多，于是就被分配到一个新的状态中了。</p>
+<p>我们可以发现一条状态序列：$7\rightarrow 8\rightarrow 5\rightarrow S$。这个序列的意义是$longest(7)$即$aabbab$的后缀依次在状态$7,8,5,S$中。我们用后缀链接$SuffixLink$这一串状态链接起来，这条$link$就是上图中的绿色虚线。</p>
 <h1 id="transition-function"><a href="#transition-function" class="headerlink" title="transition function"></a>transition function</h1><p>我们将$st$遇到的下一个字符集合记作$next(st)$，有$next(st) = \{S[i+1] | i \in  endpos(st)\}$，例如$next(S)=\{S[1], S[2], S[3], S[4], S[5], S[6], S[7]\}=\{a, b, d\}$，$next(8)=\{S[4], S[7]\}=\{b, d\}$</p>
 <p>对于一个状态$st$和一个字符$c\in next(st)$，可以定义转移函数$trans(st, c) = \{x | longest(st) + c \in  substrings(x)\}$</p>
 
@@ -422,6 +428,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/10/04/hihocoder-SAM/" rel="prev" title="hihocoder-SAM">
+                hihocoder-SAM <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -505,7 +515,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -560,7 +570,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本描述"><span class="nav-number">1.</span> <span class="nav-text">基本描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SAM的state-上例"><span class="nav-number">2.</span> <span class="nav-text">SAM的state(上例)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#暴力AC代码"><span class="nav-number">2.1.</span> <span class="nav-text">暴力AC代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些性质"><span class="nav-number">3.</span> <span class="nav-text">一些性质</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#transition-function"><span class="nav-number">4.</span> <span class="nav-text">transition function</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本描述"><span class="nav-number">1.</span> <span class="nav-text">基本描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SAM的state-上例"><span class="nav-number">2.</span> <span class="nav-text">SAM的state(上例)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#暴力AC代码"><span class="nav-number">2.1.</span> <span class="nav-text">暴力AC代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些性质"><span class="nav-number">3.</span> <span class="nav-text">一些性质</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SAM的后缀链接"><span class="nav-number">4.</span> <span class="nav-text">SAM的后缀链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#transition-function"><span class="nav-number">5.</span> <span class="nav-text">transition function</span></a></li></ol></div>
             
 
           </div>
