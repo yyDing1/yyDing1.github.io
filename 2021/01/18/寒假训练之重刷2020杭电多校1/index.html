@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="math," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="确认过眼神，都是我不会做的题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="寒假训练之重刷2020杭电多校1">
+<meta property="og:url" content="http://yoursite.com/2021/01/18/%E5%AF%92%E5%81%87%E8%AE%AD%E7%BB%83%E4%B9%8B%E9%87%8D%E5%88%B72020%E6%9D%AD%E7%94%B5%E5%A4%9A%E6%A0%A11/index.html">
+<meta property="og:site_name" content="Dyy&#39;s blog">
+<meta property="og:description" content="确认过眼神，都是我不会做的题">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-18T08:59:42.000Z">
+<meta property="article:modified_time" content="2021-01-18T10:17:57.499Z">
+<meta property="article:author" content="超Carry的dyy">
+<meta property="article:tag" content="math">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2021/01/18/寒假训练之重刷2020杭电多校1/"/>
+
+
+
+
+
+  <title>寒假训练之重刷2020杭电多校1 | Dyy's blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Dyy's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/18/%E5%AF%92%E5%81%87%E8%AE%AD%E7%BB%83%E4%B9%8B%E9%87%8D%E5%88%B72020%E6%9D%AD%E7%94%B5%E5%A4%9A%E6%A0%A11/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="超Carry的dyy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dyy's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">寒假训练之重刷2020杭电多校1</h1>
+        
+
+        <div class="post-meta">
+          
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-01-18T16:59:42+08:00">
+                2021-01-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9D%AD%E7%94%B5%E5%A4%9A%E6%A0%A11/" itemprop="url" rel="index">
+                    <span itemprop="name">杭电多校1</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2021/01/18/%E5%AF%92%E5%81%87%E8%AE%AD%E7%BB%83%E4%B9%8B%E9%87%8D%E5%88%B72020%E6%9D%AD%E7%94%B5%E5%A4%9A%E6%A0%A11/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2021/01/18/%E5%AF%92%E5%81%87%E8%AE%AD%E7%BB%83%E4%B9%8B%E9%87%8D%E5%88%B72020%E6%9D%AD%E7%94%B5%E5%A4%9A%E6%A0%A11/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>确认过眼神，都是我不会做的题</p>
+<a id="more"></a>
+<h1 id="Cookies"><a href="#Cookies" class="headerlink" title="Cookies"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6753" target="_blank" rel="noopener">Cookies</a></h1><p>缩略版题意：求$f(i) = \sum \limits_{j = 0}^{i}{divmed(j)}$，$divmed(j)$表示$j$的所有$d$个因子的从小到大的第$\lceil \frac{d}{2}\rceil$个数，单次访问求$f(n)$，$n &lt;= 10^{10}$</p>
+<p>第一次看题解写的是分段打表，还特地表明要打$10$分钟，$wtf?$</p>
+<p>开一个$4000$的数组，每$2500000$个数记录一个值，求值只需要先找到跟要找的数最近的下标，再从$\leq 1250000$的区间中求这个区间的贡献。</p>
+<p>$divmed(i)$等价表示为$\leq \sqrt i$的最大因子。</p>
+<p>对于一段区间$[l, r]$，$\sum \limits_{j = l}^{r}{divmed(j)}$可用$[1, \sqrt r]$中的数通过若干次覆盖得到，覆盖次数为$(r - l + 1) \sum \limits_{i = 1}^{\sqrt r}{\frac{1}{i}} \approx (r - l + 1)ln(\sqrt r)$</p>
+<p>复杂度为$1250000ln(\sqrt{10^{10}}) \approx 1.4 \times 10^{7}$，河里</p>
+<p>如果没有记错，我的表打了二十多分钟$qwq$</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> int ll</span></span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; P;</span><br><span class="line"><span class="function">ll <span class="title">gcd</span><span class="params">(ll a, ll b)</span></span>&#123;<span class="keyword">return</span> b? gcd(b, a % b): a;&#125;</span><br><span class="line"><span class="function">ll <span class="title">quickpow</span><span class="params">(ll a, ll b)</span></span>&#123;ll res = <span class="number">1</span>; <span class="keyword">while</span>(b)&#123;<span class="keyword">if</span> (b &amp; <span class="number">1</span>) res = res * a; a = a * a; b &gt;&gt;= <span class="number">1</span>;&#125; <span class="keyword">return</span> res;&#125;</span><br><span class="line"><span class="comment">// head</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">2500000</span>;</span><br><span class="line"><span class="keyword">int</span> t, m;</span><br><span class="line"><span class="keyword">int</span> n, k;</span><br><span class="line"><span class="keyword">int</span> tmp[N + <span class="number">5</span>];</span><br><span class="line"><span class="keyword">int</span> dict[] = &#123;<span class="number">0</span>, <span class="number">876804130</span>, <span class="number">1563212084</span>, ......, <span class="number">70848101172</span>, <span class="number">70856088067</span>, <span class="number">70870683710</span>, <span class="number">70871576695</span>, <span class="number">70880446240</span>&#125;;</span><br><span class="line"><span class="comment">// 表可以调query打出来</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> mx = <span class="built_in">sqrt</span>(r) + <span class="number">1</span>, now;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= mx; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (now = l / i * i; now &lt;= r; now += i) &#123;</span><br><span class="line">			<span class="keyword">int</span> index = now - l;</span><br><span class="line">			<span class="keyword">if</span> (index &lt; <span class="number">0</span> || i * i &gt; now) <span class="keyword">continue</span>;</span><br><span class="line">			tmp[index] = i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= r - l; i++) &#123;</span><br><span class="line">		ret += tmp[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">	<span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">	<span class="keyword">while</span> (t--) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">		<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">vt</span><span class="params">(m + <span class="number">1</span>)</span></span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">			<span class="built_in">cin</span> &gt;&gt; vt[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> fg = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = m; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">			<span class="keyword">if</span> (vt[i] == <span class="number">1</span>) &#123;</span><br><span class="line">				fg = <span class="number">1</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			k += (k - <span class="number">1</span>) / (vt[i] - <span class="number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (k &gt; n || fg) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="number">-1</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= k / N; i++) &#123;</span><br><span class="line">			ans += dict[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (k - k / N * N &lt;= N / <span class="number">2</span>) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; ans + query(k / N * N + <span class="number">1</span>, k) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; ans + dict[k / N + <span class="number">1</span>] - query(k + <span class="number">1</span>, (k / N + <span class="number">1</span>) * N) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Distinct-Sub-palindromes"><a href="#Distinct-Sub-palindromes" class="headerlink" title="Distinct Sub-palindromes"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6754" target="_blank" rel="noopener">Distinct Sub-palindromes</a></h1><p>签到题</p>
+<p>题意：给定长度，找循环子串最少的串的个数</p>
+<ul>
+<li>$n &gt; 3$，循环子串最小为$3$，且是$1,2,3,1,2,3,…,1,2,3$的形式，答案为$C_{26}^{3}$</li>
+<li>$n \leq 3$枚举情况，得到$n$是任意取都可，答案为$A_{26}^{n}$</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; P;</span><br><span class="line"><span class="function">ll <span class="title">gcd</span><span class="params">(ll a, ll b)</span></span>&#123;<span class="keyword">return</span> b? gcd(b, a % b): a;&#125;</span><br><span class="line"><span class="function">ll <span class="title">quickpow</span><span class="params">(ll a, ll b)</span></span>&#123;ll res = <span class="number">1</span>; <span class="keyword">while</span>(b)&#123;<span class="keyword">if</span> (b &amp; <span class="number">1</span>) res = res * a; a = a * a; b &gt;&gt;= <span class="number">1</span>;&#125; <span class="keyword">return</span> res;&#125;</span><br><span class="line"><span class="comment">// head</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> t, n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">	<span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">	<span class="keyword">while</span> (t--) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">		<span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="number">26</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">2</span>) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="number">26</span> * <span class="number">26</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">3</span>) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="number">26</span> * <span class="number">26</span> * <span class="number">26</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="number">26</span> * <span class="number">25</span> * <span class="number">24</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Fibonacci-Sum"><a href="#Fibonacci-Sum" class="headerlink" title="Fibonacci Sum"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6755" target="_blank" rel="noopener">Fibonacci Sum</a></h1><p>卡常头被卡没了</p>
+<p>题意：给定$n, c, k$求$\sum \limits_{i = 0}^{n}{(F_{ic})^k}$，$F$是斐波那契数列。$1\leq n,c \leq 10^{18},1\leq K\leq 10^{5}$.</p>
+<p>根据$F[i] = F[i - 1] + F[i - 2]$这一性质可求得$F$的通项公式：</p>
+<script type="math/tex; mode=display">F[i] = \frac{1}{\sqrt 5}((\frac{1 + \sqrt 5}{2})^{i} - (\frac{1 - \sqrt 5}{2})^{i})</script><p>令$d = \frac{1}{\sqrt 5},a = \frac{1 + \sqrt 5}{2},b = \frac{1 - \sqrt 5}{2}$</p>
+<script type="math/tex; mode=display">F[i] = d(a^{i} - b^{i})</script><script type="math/tex; mode=display">\sum \limits_{i = 0}^{n}{(F_{ic})^k}=\sum\limits_{i = 0}^{n}{(d(a^{ci} - b^{ci}))^k}</script><script type="math/tex; mode=display">= d^{k}\sum\limits_{i = 0}^{n}{(a^{ci} - b^{ci}})^k</script><script type="math/tex; mode=display">=d^{k}\sum\limits_{i = 0}^{n}\sum\limits_{j = 0}^{k}{C_{k}^{j}(a^{ci})^{j}(-b^{ci})^{k - j}}</script><script type="math/tex; mode=display">=d^{k}\sum\limits_{j = 0}^{k}\sum\limits_{i = 0}^{n}{C_{k}^{j}(a^{cj})^{i}(-1)^{k - j}(b^{c(k - j)})^{i}}</script><script type="math/tex; mode=display">=d^{k}\sum\limits_{j = 0}^{k}C_{k}^{j}(-1)^{k - j}\sum\limits_{i = 0}^{n}{(a^{cj}b^{c(k - j)})^{i}}</script><script type="math/tex; mode=display">=d^{k}\sum\limits_{j = 0}^{k}C_{k}^{j}(-1)^{k - j} \frac{(a^{cj}b^{c(k - j)})^{n + 1} - 1}{a^{cj}b^{c(k - j)} - 1}</script><p>如果$a^{cj}b^{c(k - j)} = 1$，求和里面取$C_{k}^{j}(-1)^{k - j}(n + 1)$</p>
+<p>对于每一个$j$都可以$O(log(mod))$求出，总复杂度$O(klog(mod))$</p>
+<p>接下来就是卡常了$qwq$</p>
+<ul>
+<li><p>无理数是可以写成逆元形式的，$\sqrt 5$的逆元是$383008016$($383008016 \times 383008016 \%1000000009 = 5$)</p>
+</li>
+<li><p>初始化的时候只求阶乘和阶乘逆元就行了，求多了常数会变大</p>
+</li>
+<li>求阶乘逆元可以线性求，先求出最大的数的逆元再往前推</li>
+<li>对于像$a^{cj}$和$b^{c(j - k)}$这样的量可以动态维护，没必要每次都求一遍，减少了循环里快速幂的次数</li>
+<li><strong>最最最最重要的一点</strong>：$a^{cj}b^{c(k - j)} = 1$的情况要特判$qwq$</li>
+</ul>
+<p>最终$1591ms/2000ms$，$???$</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> int ll</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> P = <span class="number">1e9</span> + <span class="number">9</span>;</span><br><span class="line"><span class="function">ll <span class="title">gcd</span><span class="params">(ll a, ll b)</span></span>&#123;<span class="keyword">return</span> b? gcd(b, a % b): a;&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">quickpow</span><span class="params">(ll a, ll b)</span></span>&#123;ll res = <span class="number">1</span>; <span class="keyword">while</span>(b)&#123;<span class="keyword">if</span> (b &amp; <span class="number">1</span>) res = res * a % P; a = a * a % P; b &gt;&gt;= <span class="number">1</span>;&#125; <span class="keyword">return</span> res;&#125;</span><br><span class="line"><span class="comment">// head</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">inv</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> quickpow(x, P - <span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> base = <span class="number">383008016</span>; </span><br><span class="line"><span class="keyword">int</span> t, n, c, k, a = (<span class="number">1</span> + base) * inv(<span class="number">2</span>) % P, b = (<span class="number">1</span> - base) * inv(<span class="number">2</span>) % P, d = inv(base);</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> fact[N], invfact[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	fact[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; N; i++) &#123;</span><br><span class="line">		fact[i] = fact[i - <span class="number">1</span>] * i % P;</span><br><span class="line">	&#125;</span><br><span class="line">	invfact[N - <span class="number">1</span>] = inv(fact[N - <span class="number">1</span>]);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = N - <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">		invfact[i] = invfact[i + <span class="number">1</span>] * (i + <span class="number">1</span>) % P;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">	<span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">	init();</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">	<span class="keyword">while</span> (t--) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; c &gt;&gt; k;</span><br><span class="line">		<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> A = quickpow(a, c % (P - <span class="number">1</span>)), B = quickpow(b, c % (P - <span class="number">1</span>));</span><br><span class="line">		<span class="keyword">int</span> aa = <span class="number">1</span>, bb = quickpow(B, k), invB = inv(B);</span><br><span class="line">		<span class="comment">// cout &lt;&lt; aa &lt;&lt; " " &lt;&lt; bb &lt;&lt; endl;</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= k; j++) &#123;</span><br><span class="line">			<span class="keyword">int</span> now = <span class="number">1</span>;</span><br><span class="line">			now *= fact[k] * (invfact[j] * invfact[k - j] % P) % P; now %= P;</span><br><span class="line">			<span class="keyword">if</span> ((k - j) % <span class="number">2</span> == <span class="number">1</span>) now *= <span class="number">-1</span>;</span><br><span class="line">			<span class="keyword">int</span> x = aa * bb % P;</span><br><span class="line">			<span class="keyword">if</span> (x == <span class="number">1</span>) now *= (n + <span class="number">1</span>) % P;</span><br><span class="line">			<span class="keyword">else</span> now *= (quickpow(x, (n + <span class="number">1</span>) % (P - <span class="number">1</span>)) - <span class="number">1</span>) * inv(x - <span class="number">1</span>) % P; </span><br><span class="line">			now %= P;</span><br><span class="line">			ans += now; ans %= P;</span><br><span class="line">			aa *= A; aa %= P; bb *= invB; bb %= P;</span><br><span class="line">		&#125;</span><br><span class="line">		ans *= quickpow(d, k); ans %= P;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; (ans + P) % P &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/math/" rel="tag"># math</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/01/16/%E7%BA%BF%E6%80%A7%E5%9F%BA%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83/" rel="next" title="线性基+高斯消元">
+                <i class="fa fa-chevron-left"></i> 线性基+高斯消元
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="超Carry的dyy" />
+            
+              <p class="site-author-name" itemprop="name">超Carry的dyy</p>
+              <p class="site-description motion-element" itemprop="description">沉梦昂志</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Cookies"><span class="nav-number">1.</span> <span class="nav-text">Cookies</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Distinct-Sub-palindromes"><span class="nav-number">2.</span> <span class="nav-text">Distinct Sub-palindromes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fibonacci-Sum"><span class="nav-number">3.</span> <span class="nav-text">Fibonacci Sum</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">超Carry的dyy</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'M21Od3YI7MJCQ4N6qNcfxw13-gzGzoHsz',
+        appKey: 'jFemVqFPdSU8qc61bClHSemT',
+        placeholder: 'Comments support Markdown. Leave your nickname if possible.',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
