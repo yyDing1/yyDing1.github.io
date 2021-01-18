@@ -87,7 +87,7 @@
 <meta property="og:description" content="确认过眼神，都是我不会做的题">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-18T08:59:42.000Z">
-<meta property="article:modified_time" content="2021-01-18T10:23:05.294Z">
+<meta property="article:modified_time" content="2021-01-18T10:27:34.071Z">
 <meta property="article:author" content="超Carry的dyy">
 <meta property="article:tag" content="math">
 <meta name="twitter:card" content="summary">
@@ -373,8 +373,16 @@
 <h1 id="Fibonacci-Sum"><a href="#Fibonacci-Sum" class="headerlink" title="Fibonacci Sum"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6755" target="_blank" rel="noopener">Fibonacci Sum</a></h1><p>卡常头被卡没了</p>
 <p>题意：给定$n, c, k$求$\sum \limits_{i = 0}^{n}{(F_{ic})^k}$，$F$是斐波那契数列。$1\leq n,c \leq 10^{18},1\leq K\leq 10^{5}$.</p>
 <p>根据$F[i] = F[i - 1] + F[i - 2]$这一性质可求得$F$的通项公式：</p>
-<script type="math/tex; mode=display">F[i] = \frac{1}{\sqrt 5}((\frac{1 + \sqrt 5}{2})^{i} - (\frac{1 - \sqrt 5}{2})^{i})</script><p>令$d = \frac{1}{\sqrt 5},a = \frac{1 + \sqrt 5}{2},b = \frac{1 - \sqrt 5}{2}$</p>
-<script type="math/tex; mode=display">F[i] = d(a^{i} - b^{i})</script><script type="math/tex; mode=display">\sum \limits_{i = 0}^{n}{(F_{ic})^k}=\sum\limits_{i = 0}^{n}{(d(a^{ci} - b^{ci}))^k}</script><script type="math/tex; mode=display">= d^{k}\sum\limits_{i = 0}^{n}{(a^{ci} - b^{ci}})^k</script><script type="math/tex; mode=display">=d^{k}\sum\limits_{i = 0}^{n}\sum\limits_{j = 0}^{k}{C_{k}^{j}(a^{ci})^{j}(-b^{ci})^{k - j}}</script><script type="math/tex; mode=display">=d^{k}\sum\limits_{j = 0}^{k}\sum\limits_{i = 0}^{n}{C_{k}^{j}(a^{cj})^{i}(-1)^{k - j}(b^{c(k - j)})^{i}}</script><script type="math/tex; mode=display">=d^{k}\sum\limits_{j = 0}^{k}C_{k}^{j}(-1)^{k - j}\sum\limits_{i = 0}^{n}{(a^{cj}b^{c(k - j)})^{i}}</script><script type="math/tex; mode=display">=d^{k}\sum\limits_{j = 0}^{k}C_{k}^{j}(-1)^{k - j} \frac{(a^{cj}b^{c(k - j)})^{n + 1} - 1}{a^{cj}b^{c(k - j)} - 1}</script><p>如果$a^{cj}b^{c(k - j)} = 1$，求和里面取$C_{k}^{j}(-1)^{k - j}(n + 1)$</p>
+<p>$F[i] = \frac{1}{\sqrt 5}((\frac{1 + \sqrt 5}{2})^{i} - (\frac{1 - \sqrt 5}{2})^{i})$</p>
+<p>令$d = \frac{1}{\sqrt 5},a = \frac{1 + \sqrt 5}{2},b = \frac{1 - \sqrt 5}{2}$</p>
+<p>$F[i] = d(a^{i} - b^{i})$</p>
+<p>$\sum \limits_{i = 0}^{n}{(F_{ic})^k}=\sum\limits_{i = 0}^{n}{(d(a^{ci} - b^{ci}))^k}$</p>
+<p>$= d^{k}\sum\limits_{i = 0}^{n}{(a^{ci} - b^{ci}})^k$</p>
+<p>$=d^{k}\sum\limits_{i = 0}^{n}\sum\limits_{j = 0}^{k}{C_{k}^{j}(a^{ci})^{j}(-b^{ci})^{k - j}}$</p>
+<p>$=d^{k}\sum\limits_{j = 0}^{k}\sum\limits_{i = 0}^{n}{C_{k}^{j}(a^{cj})^{i}(-1)^{k - j}(b^{c(k - j)})^{i}}$</p>
+<p>$=d^{k}\sum\limits_{j = 0}^{k}C_{k}^{j}(-1)^{k - j}\sum\limits_{i = 0}^{n}{(a^{cj}b^{c(k - j)})^{i}}$</p>
+<p>$=d^{k}\sum\limits_{j = 0}^{k}C_{k}^{j}(-1)^{k - j} \frac{(a^{cj}b^{c(k - j)})^{n + 1} - 1}{a^{cj}b^{c(k - j)} - 1}$</p>
+<p>如果$a^{cj}b^{c(k - j)} = 1$，求和里面取$C_{k}^{j}(-1)^{k - j}(n + 1)$</p>
 <p>对于每一个$j$都可以$O(log(mod))$求出，总复杂度$O(klog(mod))$</p>
 <p>接下来就是卡常了$qwq$</p>
 <ul>
