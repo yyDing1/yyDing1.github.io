@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="data structure,strings," />
+  <meta name="keywords" content="Catalan number," />
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="无用的内容">
+<meta name="description" content="参考文献：  OI Wiki  Catalan 数列及其应用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="G.strings">
-<meta property="og:url" content="http://yoursite.com/2020/10/14/G-strings/index.html">
+<meta property="og:title" content="卡特兰数">
+<meta property="og:url" content="http://yoursite.com/2021/01/26/%E5%8D%A1%E7%89%B9%E5%85%B0%E6%95%B0/index.html">
 <meta property="og:site_name" content="Dyy&#39;s blog">
-<meta property="og:description" content="无用的内容">
+<meta property="og:description" content="参考文献：  OI Wiki  Catalan 数列及其应用">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-10-14T12:22:50.000Z">
-<meta property="article:modified_time" content="2020-10-14T12:59:20.278Z">
+<meta property="article:published_time" content="2021-01-26T15:07:31.000Z">
+<meta property="article:modified_time" content="2021-01-27T07:58:43.674Z">
 <meta property="article:author" content="超Carry的dyy">
-<meta property="article:tag" content="data structure">
-<meta property="article:tag" content="strings">
+<meta property="article:tag" content="Catalan number">
 <meta name="twitter:card" content="summary">
 
 
@@ -121,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/10/14/G-strings/"/>
+  <link rel="canonical" href="http://yoursite.com/2021/01/26/卡特兰数/"/>
 
 
 
 
 
-  <title>G.strings | Dyy's blog</title>
+  <title>卡特兰数 | Dyy's blog</title>
   
 
 
@@ -254,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/10/14/G-strings/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/26/%E5%8D%A1%E7%89%B9%E5%85%B0%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="超Carry的dyy">
@@ -271,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">G.strings</h1>
+          <h1 class="post-title" itemprop="name headline">卡特兰数</h1>
         
 
         <div class="post-meta">
@@ -284,8 +283,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-10-14T20:22:50+08:00">
-                2020-10-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-01-26T23:07:31+08:00">
+                2021-01-26
               </time>
             
 
@@ -307,8 +306,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/data-structure/" itemprop="url" rel="index">
-                    <span itemprop="name">data structure</span>
+                  <a href="/categories/math/" itemprop="url" rel="index">
+                    <span itemprop="name">math</span>
                   </a>
                 </span>
 
@@ -325,8 +324,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/10/14/G-strings/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/10/14/G-strings/" itemprop="commentCount"></span>
+                <a href="/2021/01/26/%E5%8D%A1%E7%89%B9%E5%85%B0%E6%95%B0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2021/01/26/%E5%8D%A1%E7%89%B9%E5%85%B0%E6%95%B0/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -354,25 +353,65 @@
       
 
       
-        <p><del>无用的内容</del></p>
+        <p>参考文献：</p>
+<ol>
+<li><p><a href="https://oi-wiki.org/math/catalan/" target="_blank" rel="noopener">OI Wiki</a></p>
+</li>
+<li><p><a href="http://blog.miskcoo.com/2015/07/catalan-number" target="_blank" rel="noopener">Catalan 数列及其应用</a></p>
+</li>
+</ol>
+<blockquote>
 <a id="more"></a>
-<h1 id="G-strings"><a href="#G-strings" class="headerlink" title="G.strings"></a><a href="https://codeforces.com/gym/102465/problem/G" target="_blank" rel="noopener">G.strings</a></h1><ul>
-<li>题意：给定$s[0]$ ，有$s[0] - s[i]$ 生成$s[i + 1]$ 。<ul>
-<li>$sub(index, l, r)$ ：$s[i] = s[index]_{[l, r)}$ </li>
-<li>$app(index1, index2)$ ：$s[i] = s[index1] + s[index2]$ </li>
-</ul>
-</li>
-<li>$len\in [1, 2 ^ {63})$ ，存串必炸</li>
-<li>采用树状结构<ul>
-<li>对于$app$ 操作，只需找到两个串对应的节点拼接 $O(1)$</li>
-<li>对于$sub$ 操作，类似于线段树查询操作找到合适的所有字段，并进行一系列$app$ 操作</li>
-</ul>
-</li>
-</ul>
-<div><div class="fold_hider"><div class="close hider_title">点击显/隐代码</div></div><div class="fold">
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">3e3</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> P = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> sum, lch, rch;</span><br><span class="line">    ll len;</span><br><span class="line">&#125;tree[N * N];</span><br><span class="line"><span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">rope</span> &#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">app</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (a == <span class="number">0</span> || b == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">max</span>(a, b);</span><br><span class="line">        &#125;</span><br><span class="line">        tree[++num].sum = (tree[a].sum + tree[b].sum) % P;</span><br><span class="line">        tree[num].lch = a, tree[num].rch = b;</span><br><span class="line">        tree[num].len = tree[a].len + tree[b].len;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">sub</span><span class="params">(<span class="keyword">int</span> rt, ll l, ll r)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (l == <span class="number">1</span> &amp;&amp; r == tree[rt].len) &#123;</span><br><span class="line">            <span class="keyword">return</span> rt;</span><br><span class="line">        &#125;</span><br><span class="line">        ll tmp = tree[tree[rt].lch].len;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">0</span>, b = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (r &lt;= tmp) &#123;</span><br><span class="line">            a = sub(tree[rt].lch, l, r);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (l &gt; tmp) &#123;</span><br><span class="line">            b = sub(tree[rt].rch, l - tmp, r - tmp);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            a = sub(tree[rt].lch, l, tmp);</span><br><span class="line">            b = sub(tree[rt].rch, <span class="number">1</span>, r - tmp);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> app(a, b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;rp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> s[N];</span><br><span class="line"><span class="keyword">int</span> index1, index2;</span><br><span class="line">ll li, ri;</span><br><span class="line"><span class="keyword">int</span> mp[N];</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s"</span>, s + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">int</span> len = <span class="built_in">strlen</span>(s + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= len; i++) &#123;</span><br><span class="line">        tree[++num].len = <span class="number">1</span>;</span><br><span class="line">        tree[num].sum = s[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> now = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= len; i++) &#123;</span><br><span class="line">        rp.app(now, i);</span><br><span class="line">        now = num;</span><br><span class="line">    &#125;</span><br><span class="line">    mp[<span class="number">1</span>] = num;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%s"</span>, s + <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span> (s[<span class="number">1</span>] == <span class="string">'S'</span>) &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%lld%lld"</span>, &amp;index1, &amp;li, &amp;ri);</span><br><span class="line">            index1++; li++;</span><br><span class="line">            <span class="keyword">if</span> (li &lt;= ri) &#123;</span><br><span class="line">                mp[i] = rp.sub(mp[index1], li, ri);                </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;index1, &amp;index2);</span><br><span class="line">            index1++; index2++;</span><br><span class="line">            mp[i] = rp.app(mp[index1], mp[index2]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, tree[mp[n]].sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</div></div>
+</blockquote>
+<h1 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h1><p>找到的以下卡特兰数的问题：</p>
+<ol>
+<li>有多少种不同的长度为$2n$的括号序列？</li>
+<li>有$2n$个人排成一行进入剧场。入场费$5$元。其中只有$n$个人有一张$5$元钞票，另外$n$人只有$10$元钞票，剧院无其它钞票，问有多少中方法使得只要有$10$元的人买票，售票处就有$5$元的钞票找零？</li>
+<li>一位大城市的律师在她住所以北$n$个街区和以东$n$个街区处工作。每天她走$2n$个街区去上班。如果他从不穿越（但可以碰到）从家到办公室的对角线，那么有多少条可能的道路？</li>
+<li>在圆上选择$2n$个点，将这些点成对连接起来使得所得到的$n$条线段不相交的方法数？</li>
+<li>对角线不相交的情况下，将一个凸多边形区域分成三角形区域的方法数？</li>
+<li>一个栈（无穷大）的进栈序列为$1,2,3,..,n$有多少个不同的出栈序列？</li>
+<li>$n$个结点可构造多少个不同的二叉树？</li>
+<li>$n$个$+1$和$n$个$-1$构成$2n$项$a_{1},a_{2},…,a_{2n}$，其部分和满足$a_{1} + a_{2} + … + a_{k} \geq 0(k = 1,2,3,…,2n)$对与$n$该数列为？</li>
+<li>现在有$2n$个人，他们身高互不相同，他们要成两排，每一排有$n$个人，并且满足每一排必须是从矮到高，且后一排的人要比前一排对应的人要高，问有多少种排法?</li>
+</ol>
+<p>以上形成的数列都是卡特兰数。</p>
+<h1 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h1><p>其递推关系（也使其原始定义）为$H_{n} = \sum \limits_{i = 0}^{n}{H_{i}H_{n - 1 - i}}$ $(*)$</p>
+<h1 id="Some-Proof"><a href="#Some-Proof" class="headerlink" title="Some Proof"></a>Some Proof</h1><p>$(*) \Leftrightarrow(1)$：$H_{n} = \sum \limits_{i = 0}^{n}{H_{i}H_{n - 1 - i}}$很好理解</p>
+<p>$(2) \Leftrightarrow(1)$：$5$元相当于$($，$10$元相当于$)$</p>
+<p>$(3) \Leftrightarrow(1)$：向右相当于$($，向上相当于$)$</p>
+<p>$(4) \Leftrightarrow(1)$：$H_{n} = \sum \limits_{i = 0}^{n}{H_{i}H_{n - 1 - i}}$很好理解</p>
+<p>$(5) \Leftrightarrow(4)$：显然</p>
+<p>$(6) \Leftrightarrow(1)$：出栈相当于$($，入栈相当于$)$</p>
+<p>$(7) \Leftrightarrow(1)$：$H_{n} = \sum \limits_{i = 0}^{n}{H_{i}H_{n - 1 - i}}$很好理解$or$向下遍历相当于$($，向上回溯相当于$)$</p>
+<p>$(8) \Leftrightarrow(1)$：$+1$元相当于$($，$-1$元相当于$)$</p>
+<p>$(9) \Leftrightarrow(1)$：矮队人相当于$($，高队人元相当于$)$</p>
+<p>大部分问题都可以转换成原始定义或括号问题</p>
+<h1 id="通项公式"><a href="#通项公式" class="headerlink" title="通项公式"></a>通项公式</h1><p>对于$(2)$，抽象为$(0, 0) \rightarrow (n, n)$且任意时刻$y \leq x$的方案数</p>
+<p>取反：$(0, 0) \rightarrow (n, n)$且存在时刻$y \geq x + 1$的方案数，将$(n, n)$关于$y = x + 1$对称$(n - 1, n + 1)$，即为$(0, 0) \rightarrow (n - 1, n + 1)$的方案数，为$2n \choose n - 1$</p>
+<p>总方案数为${2n \choose n} - {2n \choose n - 1} = \frac{1}{n + 1} {2n \choose n}$</p>
+<p>卡特兰数的通项公式为$H_{n} = \frac{1}{n + 1} {2n \choose n}$</p>
+<h1 id="生成函数"><a href="#生成函数" class="headerlink" title="生成函数"></a>生成函数</h1><p>$G(x) = \sum\limits_{i = 0}^{\infty}{H_{i}x^i}$，求$H_{i}$</p>
+<p>$H_{n} = \sum \limits_{i = 0}^{n}{H_{i}H_{n - 1 - i}}$类似于两个$G(x)$的卷积</p>
+<p>$G(x)\times G(x) = \sum\limits_{i = 0}^{\infty}{x^{i}\sum\limits_{j = 0}^{i}{H_{j}H_{i - j}}}=\sum\limits_{i = 0}^{\infty}{H_{i + 1}x^{i}}$</p>
+<p>$xG^2{(x)}=\sum\limits_{i = 0}^{\infty}{H_{i + 1}x^{i + 1}} = 1 + G(x)$ </p>
+<p>$xG^2{(x)} = 1 + G(x)$</p>
+<p>$G(x) = \frac{1\pm\sqrt{1-4x}}{2x}$</p>
+<p>对$\sqrt{1-4x}$进行分解</p>
+<p>$(1 - 4x)^{\frac{1}{2} } = \sum\limits_{i = 0}^{\infty}{ {\frac{1}{2} \choose i}{(- 4x)^{i} } }$</p>
+<p>$=\sum\limits_{i = 0}^{\infty}{\frac{(\frac{1}{2})(\frac{1}{2} - 1)(\frac{1}{2} - 2)…(\frac{1}{2} - i + 1)}{i!}}(-4x)^{i}$</p>
+<p>$=\sum\limits_{i = 0}^{\infty}{\frac{-(-\frac{1}{2})^{i}\times 1\times3\times5\times…\times(2i - 3)}{i!}}(-4x)^{i}$</p>
+<p>$=\sum\limits_{i = 0}^{\infty}{-\frac{1\times3\times5\times…\times(2i - 3)}{i!}}(2x)^{i}$</p>
+<p>$=\sum\limits_{i = 0}^{\infty}{-\frac{1\times3\times5\times…\times(2i - 3)}{i!}}\times \frac{2\times4\times6\times…\times(2i)}{1\times2\times3\times…\times i}x^{i}$</p>
+<p>$=\sum\limits_{i = 0}^{\infty}{- \frac{(2i)!}{(2i - 1)(i!)^2}}x^{i}$</p>
+<p>$=\sum\limits_{i = 0}^{\infty}{-\frac{1}{2i - 1}{2i \choose i}}x^{i}$</p>
+<p>显然$G(x)$取$\frac{1 -\sqrt{1-4x}}{2x}$</p>
+<p>$G(x) = \frac{1 + \sum\limits_{i = 0}^{\infty}{\frac{1}{2i - 1}{2i \choose i}}x^{i}}{2x}$</p>
+<p>$=\sum\limits_{i = 0}^{\infty}{\frac{1}{2(2i - 1)}{2i \choose i}}x^{i - 1}$</p>
+<p>$=\sum\limits_{i = 0}^{\infty}{\frac{1}{2(2i + 1)}{2i + 2 \choose i + 1}}x^{i}$</p>
+<p>$=\sum\limits_{i = 0}^{\infty}{\frac{1}{2(2i + 1)}\frac{(2i + 2)(2i + 1)}{(i + 1)^2}{2i \choose i}}x^{i}$</p>
+<p>$=\sum\limits_{i = 0}^{\infty}{\frac{1}{i + 1}{2i \choose i}}x^{i}$</p>
+<p>所以$H_{n} = \frac{1}{n + 1}{2n \choose n}$</p>
 
       
     </div>
@@ -390,9 +429,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/data-structure/" rel="tag"># data structure</a>
-          
-            <a href="/tags/strings/" rel="tag"># strings</a>
+            <a href="/tags/Catalan-number/" rel="tag"># Catalan number</a>
           
         </div>
       
@@ -405,8 +442,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/10/04/hihocoder-SAM/" rel="next" title="hihocoder-SAM">
-                <i class="fa fa-chevron-left"></i> hihocoder-SAM
+              <a href="/2021/01/24/%E5%85%B3%E4%BA%8EFFT-NTT/" rel="next" title="关于FFT/NTT">
+                <i class="fa fa-chevron-left"></i> 关于FFT/NTT
               </a>
             
           </div>
@@ -414,10 +451,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/11/18/CF684/" rel="prev" title="CF Round 684">
-                CF Round 684 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -556,7 +589,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#G-strings"><span class="nav-number">1.</span> <span class="nav-text">G.strings</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Example"><span class="nav-number">1.</span> <span class="nav-text">Example</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Definition"><span class="nav-number">2.</span> <span class="nav-text">Definition</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Some-Proof"><span class="nav-number">3.</span> <span class="nav-text">Some Proof</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#通项公式"><span class="nav-number">4.</span> <span class="nav-text">通项公式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生成函数"><span class="nav-number">5.</span> <span class="nav-text">生成函数</span></a></li></ol></div>
             
 
           </div>
