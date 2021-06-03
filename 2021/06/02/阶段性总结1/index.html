@@ -79,12 +79,12 @@
 
 
 
-<meta name="description" content="前六周主要内容包括：  机器学习基础：线性回归，逻辑回归 简单神经网络模型（前馈神经网络和反向传播算法）">
+<meta name="description" content="前六周主要内容包括：  机器学习基础：线性回归，逻辑回归 简单神经网络模型（前馈神经网络和反向传播算法）  具体数据和代码：我的github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="吴恩达machine learning课程前六周作业总结">
 <meta property="og:url" content="http://yoursite.com/2021/06/02/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%931/index.html">
 <meta property="og:site_name" content="Dyy&#39;s blog">
-<meta property="og:description" content="前六周主要内容包括：  机器学习基础：线性回归，逻辑回归 简单神经网络模型（前馈神经网络和反向传播算法）">
+<meta property="og:description" content="前六周主要内容包括：  机器学习基础：线性回归，逻辑回归 简单神经网络模型（前馈神经网络和反向传播算法）  具体数据和代码：我的github">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/2021/06/02/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%931/ex1_1.png">
 <meta property="og:image" content="http://yoursite.com/2021/06/02/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%931/ex2_1.png">
@@ -95,7 +95,7 @@
 <meta property="og:image" content="http://yoursite.com/2021/06/02/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%931/ex4_1.png">
 <meta property="og:image" content="http://yoursite.com/2021/06/02/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%931/ex4_2.png">
 <meta property="article:published_time" content="2021-06-02T11:58:42.000Z">
-<meta property="article:modified_time" content="2021-06-03T10:38:10.042Z">
+<meta property="article:modified_time" content="2021-06-03T13:41:48.111Z">
 <meta property="article:author" content="超Carry的dyy">
 <meta property="article:tag" content="machine learning">
 <meta property="article:tag" content="neural network">
@@ -368,6 +368,7 @@
 <li>机器学习基础：线性回归，逻辑回归</li>
 <li>简单神经网络模型（前馈神经网络和反向传播算法）</li>
 </ol>
+<p>具体数据和代码：<a href="https://github.com/yyDing1/AI-algorithm" target="_blank" rel="noopener">我的github</a></p>
 <a id="more"></a>
 <p>成果如下（均用Python实现）：</p>
 <ul>
@@ -379,7 +380,7 @@
 <li>逻辑回归模型，二分类问题，并将其扩展到多分类问题（$|y|$个分类器，一对多分类）</li>
 <li>简单神经网络模型（前馈神经网络和反向传播算法），先构建两个隐层的情况，并加以改进，变为自定义层数以及自定义每层的神经元数量，增加了其泛用性</li>
 </ul>
-<h1 id="机器学习基础"><a href="#机器学习基础" class="headerlink" title="机器学习基础"></a>机器学习基础</h1><h2 id="线性回归（Week-2-exercise）"><a href="#线性回归（Week-2-exercise）" class="headerlink" title="线性回归（Week 2 exercise）"></a>线性回归（Week 2 exercise）</h2><h3 id="梯度下降方法"><a href="#梯度下降方法" class="headerlink" title="梯度下降方法"></a>梯度下降方法</h3><p>损失函数：$J(\theta)=\frac{1}{2m}\sum\limits_{i=1}^{m}({h}_{\theta}({x}^{(i)})-{y}^{(i)})^{2}$</p>
+<h1 id="机器学习基础"><a href="#机器学习基础" class="headerlink" title="机器学习基础"></a>机器学习基础</h1><h2 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h2><h3 id="梯度下降方法"><a href="#梯度下降方法" class="headerlink" title="梯度下降方法"></a>梯度下降方法</h3><p>损失函数：$J(\theta)=\frac{1}{2m}\sum\limits_{i=1}^{m}({h}_{\theta}({x}^{(i)})-{y}^{(i)})^{2}$</p>
 <p>梯度：$\frac{\partial J(\theta)}{\partial \theta_j} = \frac{1}{m}\sum\limits_{i=1}^{m}({h}_{\theta}({x}^{(i)})-{y}^{(i)})x_j^{(i)}$，$\frac{\partial J(\theta)}{\partial \theta} = X^TX\theta - X^Ty$</p>
 <p>因为固定学习率的方式特征每一维值极差相差较大，所以作了标准化</p>
 <p>源代码：</p>
@@ -613,7 +614,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#机器学习基础"><span class="nav-number">1.</span> <span class="nav-text">机器学习基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性回归（Week-2-exercise）"><span class="nav-number">1.1.</span> <span class="nav-text">线性回归（Week 2 exercise）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#梯度下降方法"><span class="nav-number">1.1.1.</span> <span class="nav-text">梯度下降方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正规方程方法"><span class="nav-number">1.1.2.</span> <span class="nav-text">正规方程方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑回归"><span class="nav-number">1.2.</span> <span class="nav-text">逻辑回归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础实现"><span class="nav-number">1.2.1.</span> <span class="nav-text">基础实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展到多项式版本"><span class="nav-number">1.2.2.</span> <span class="nav-text">扩展到多项式版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于正则项的一些尝试"><span class="nav-number">1.2.3.</span> <span class="nav-text">关于正则项的一些尝试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二分类扩展：多分类器"><span class="nav-number">1.2.4.</span> <span class="nav-text">二分类扩展：多分类器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#神经网络基础"><span class="nav-number">2.</span> <span class="nav-text">神经网络基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单前馈神经网络-反向传播"><span class="nav-number">2.1.</span> <span class="nav-text">简单前馈神经网络+反向传播</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一个两层的神经网络模型-含正则化项和反向传播梯度下降"><span class="nav-number">2.1.1.</span> <span class="nav-text">一个两层的神经网络模型(含正则化项和反向传播梯度下降)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义层数以及神经元数量"><span class="nav-number">2.1.2.</span> <span class="nav-text">自定义层数以及神经元数量</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#机器学习基础"><span class="nav-number">1.</span> <span class="nav-text">机器学习基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性回归"><span class="nav-number">1.1.</span> <span class="nav-text">线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#梯度下降方法"><span class="nav-number">1.1.1.</span> <span class="nav-text">梯度下降方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正规方程方法"><span class="nav-number">1.1.2.</span> <span class="nav-text">正规方程方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑回归"><span class="nav-number">1.2.</span> <span class="nav-text">逻辑回归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础实现"><span class="nav-number">1.2.1.</span> <span class="nav-text">基础实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展到多项式版本"><span class="nav-number">1.2.2.</span> <span class="nav-text">扩展到多项式版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于正则项的一些尝试"><span class="nav-number">1.2.3.</span> <span class="nav-text">关于正则项的一些尝试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二分类扩展：多分类器"><span class="nav-number">1.2.4.</span> <span class="nav-text">二分类扩展：多分类器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#神经网络基础"><span class="nav-number">2.</span> <span class="nav-text">神经网络基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单前馈神经网络-反向传播"><span class="nav-number">2.1.</span> <span class="nav-text">简单前馈神经网络+反向传播</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一个两层的神经网络模型-含正则化项和反向传播梯度下降"><span class="nav-number">2.1.1.</span> <span class="nav-text">一个两层的神经网络模型(含正则化项和反向传播梯度下降)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义层数以及神经元数量"><span class="nav-number">2.1.2.</span> <span class="nav-text">自定义层数以及神经元数量</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
