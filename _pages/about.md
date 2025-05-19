@@ -23,7 +23,7 @@ I am Yuyang Ding (丁誉洋), a second-year Ph.D. student at the Institute of Ar
 
 My research lies in **LLM Reasoning**, including but not limited to Data Synthesis, Test-Time Scaling, Robust Learning, RL Alignment, etc.
 
-<!-- **Seeking internship opportunities in LLM Reasoning and Reinforcement Learning.** -->
+**Seeking research internship opportunities in LLM Reasoning and Reinforcement Learning.**
 
 <!-- # 🔥 News
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
@@ -71,15 +71,13 @@ My research lies in **LLM Reasoning**, including but not limited to Data Synthes
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">IEEE TKDE</div><img src='images/pic-dsner.png' width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[DS-NER: Unveiling and Addressing Latent Noise in Distant Annotations]()
+[DS-NER: Unveiling and Addressing Latent Noise in Distant Annotations](https://www.computer.org/csdl/journal/tk/5555/01/10988654/26tr7cYv7KU)
 
 **Yuyang Ding**, Dan Qiao, Juntao Li, Jiajie Xu, Pingfu Chao, Xiaofang Zhou, Min Zhang
 
-<!-- **TL;DR:** We introduce GNER, a Generative Named Entity Recognition framework, which demonstrates enhanced zero-shot capabilities across unseen entity domains. -->
-
 [![](https://img.shields.io/badge/arXiv-Paper-orange?logo=arxiv&logoColor=white)]()
-[![](https://img.shields.io/badge/GitHub-Code-blue?logo=github&logoColor=white)]()
-[![](https://img.shields.io/badge/🤗 HuggingFace-Models-green)]()
+[![](https://img.shields.io/badge/GitHub-Code-blue?logo=github&logoColor=white)](https://github.com/yyDing1/DS-NER)
+<!-- [![](https://img.shields.io/badge/🤗 HuggingFace-Models-green)]() -->
 
 </div>
 </div>
