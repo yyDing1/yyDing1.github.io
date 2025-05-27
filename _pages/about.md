@@ -23,7 +23,7 @@ I am Yuyang Ding (丁誉洋), a second-year Ph.D. student at the Institute of Ar
 
 My research lies in **LLM Reasoning**, including but not limited to Data Synthesis, Test-Time Scaling, Robust Learning, RL Alignment, etc.
 
-**Seeking research internship opportunities in LLM Reasoning and Reinforcement Learning.**
+<!-- **Seeking research internship opportunities in LLM Reasoning and Reinforcement Learning.** -->
 
 <!-- # 🔥 News
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
