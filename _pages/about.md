@@ -21,6 +21,8 @@ redirect_from:
 
 I am Yuyang Ding (丁誉洋), a second-year Ph.D. student at the Institute of Artificial Intelligence, Soochow University, under the supervision of [Assoc. Prof. Juntao Li](https://lijuntaopku.github.io) and [Prof. Min Zhang](https://zhangmin-nlp-ai.github.io).
 
+<!-- I'm a research intern at Seed-Infrastructures Team, ByteDance, working on large-scale reinforcement learning infrastructure. -->
+
 My research lies in **LLM Reasoning**, including but not limited to Data Synthesis, Test-Time Scaling, Robust Learning, RL Alignment, etc.
 
 <!-- **Seeking research internship opportunities in LLM Reasoning and Reinforcement Learning.** -->
@@ -54,13 +56,13 @@ My research lies in **LLM Reasoning**, including but not limited to Data Synthes
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025</div><img src='images/pic-scalequest.png' width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[ScaleQuest: Unleashing LLM Reasoning Capability via Scalable Question Synthesis from Scratch](https://arxiv.org/pdf/2410.18693)
+[ScaleQuest: Unleashing LLM Reasoning Capability via Scalable Question Synthesis from Scratch](https://arxiv.org/abs/2410.18693)
 
 **Yuyang Ding**, Xinyu Shi, Xiaobo Liang, Juntao Li, Zhaopeng Tu, Qiaoming Zhu, Min Zhang
 
 **TL;DR:** We introduce ScaleQuest, a scalable, novel and cost-effective data synthesis method to unleash the reasoning capability of LLMs.
 
-[![](https://img.shields.io/badge/arXiv-Paper-orange?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2410.18693)
+[![](https://img.shields.io/badge/arXiv-Paper-orange?logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2410.18693)
 [![](https://img.shields.io/badge/GitHub-Code-blue?logo=github&logoColor=white)](https://github.com/yyDing1/ScaleQuest)
 [![](https://img.shields.io/badge/🤗 HuggingFace-Models-green)](https://huggingface.co/collections/dyyyyyyyy/scalequest-670a7dc2623c91990f28913b)
 
@@ -75,7 +77,9 @@ My research lies in **LLM Reasoning**, including but not limited to Data Synthes
 
 **Yuyang Ding**, Dan Qiao, Juntao Li, Jiajie Xu, Pingfu Chao, Xiaofang Zhou, Min Zhang
 
-[![](https://img.shields.io/badge/arXiv-Paper-orange?logo=arxiv&logoColor=white)]()
+**TL;DR:** We investigated the noise distribution in distantly supervised annotations and proposed targeted denoising and robust training strategies.
+
+[![](https://img.shields.io/badge/arXiv-Paper-orange?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.12454)
 [![](https://img.shields.io/badge/GitHub-Code-blue?logo=github&logoColor=white)](https://github.com/yyDing1/DS-NER)
 <!-- [![](https://img.shields.io/badge/🤗 HuggingFace-Models-green)]() -->
 
@@ -86,13 +90,13 @@ My research lies in **LLM Reasoning**, including but not limited to Data Synthes
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2024</div><img src='images/pic-gner.png' width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[GNER: Rethinking Negative Instances for Generative Named Entity Recognition](https://arxiv.org/pdf/2402.16602)
+[GNER: Rethinking Negative Instances for Generative Named Entity Recognition](https://arxiv.org/abs/2402.16602)
 
 **Yuyang Ding**, Juntao Li, Pinzheng Wang, Zecheng Tang, Bowen Yan, Min Zhang
 
 **TL;DR:** We introduce GNER, a Generative Named Entity Recognition framework, which demonstrates enhanced zero-shot capabilities across unseen entity domains.
 
-[![](https://img.shields.io/badge/arXiv-Paper-orange?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2402.16602)
+[![](https://img.shields.io/badge/arXiv-Paper-orange?logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2402.16602)
 [![](https://img.shields.io/badge/GitHub-Code-blue?logo=github&logoColor=white)](https://github.com/yyDing1/GNER)
 [![](https://img.shields.io/badge/🤗 HuggingFace-Models-green)](https://huggingface.co/collections/dyyyyyyyy/gner-65dda2cb96c6e35c814dea56)
 
@@ -100,18 +104,24 @@ My research lies in **LLM Reasoning**, including but not limited to Data Synthes
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">COLING 2022</div><img src='images/pic-selfmix.png' width="100%"></div></div>
+<!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">COLING 2022</div><img src='images/pic-selfmix.png' width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[SelfMix: Robust Learning Against Textual Label Noise with Self-Mixup Training](https://arxiv.org/pdf/2210.04525)
+[SelfMix: Robust Learning Against Textual Label Noise with Self-Mixup Training](https://arxiv.org/abs/2210.04525)
 
 Dan Qiao\*, Chenchen Dai\*, <strong>Yuyang Ding*</strong>, Juntao Li, Qiang Chen, Wenliang Chen, Min Zhang
 
-[![](https://img.shields.io/badge/arXiv-Paper-orange?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2402.16602)
+[![](https://img.shields.io/badge/arXiv-Paper-orange?logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2402.16602)
 [![](https://img.shields.io/badge/GitHub-Code-blue?logo=github&logoColor=white)](https://github.com/noise-learning/SelfMix)
 
 </div>
-</div>
+</div> -->
+
+- `COLING 2022` [SelfMix: Robust Learning Against Textual Label Noise with Self-Mixup Training](https://arxiv.org/abs/2210.04525),
+  
+  Dan Qiao\*, Chenchen Dai\*, <strong>Yuyang Ding*</strong>, Juntao Li, Qiang Chen, Wenliang Chen, Min Zhang
+  [![](https://img.shields.io/badge/arXiv-Paper-orange?logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2402.16602)
+  [![](https://img.shields.io/badge/GitHub-Code-blue?logo=github&logoColor=white)](https://github.com/noise-learning/SelfMix)
 
 
 - `SCIS (CCF-A)` [OpenBA: An Open-sourced 15B Bilingual Asymmetric seq2seq Model Pre-trained from Scratch](https://arxiv.org/pdf/2309.10706),
@@ -121,7 +131,7 @@ Dan Qiao\*, Chenchen Dai\*, <strong>Yuyang Ding*</strong>, Juntao Li, Qiang Chen
   [![](https://img.shields.io/badge/GitHub-Code-blue?logo=github&logoColor=white)](https://github.com/OpenNLG/openBA)
   [![](https://img.shields.io/badge/🤗 HuggingFace-Models-green)](https://huggingface.co/OpenNLG/OpenBA-V1-Flan)
 
-- `EMNLP 2023` [CMD: a framework for Context-aware Model self-Detoxification](https://arxiv.org/pdf/2308.08295)
+- `EMNLP 2023` [CMD: a framework for Context-aware Model self-Detoxification](https://arxiv.org/pdf/2308.08295),
 
   Zecheng Tang, Keyan Zhou, Juntao Li, **Yuyang Ding**, Pinzheng Wang, Yan Bowen, Renjie Hua, Min Zhang
   [![](https://img.shields.io/badge/arXiv-Paper-orange?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2308.08295)
@@ -148,7 +158,7 @@ Dan Qiao\*, Chenchen Dai\*, <strong>Yuyang Ding*</strong>, Juntao Li, Qiang Chen
 
 <!-- # 💬 Invited Talks
 - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/) -->
 
 # 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China. -->
+- *2025.06 - current*, Research Intern, ByteDance Seed, Shanghai, China,
