@@ -23,7 +23,9 @@ I am Yuyang Ding (丁誉洋), a second-year Ph.D. student at the Institute of Ar
 
 <!-- I'm a research intern at Seed-Infrastructures Team, ByteDance, working on large-scale reinforcement learning infrastructure. -->
 
-My research lies in **LLM Reasoning**, including but not limited to Data Synthesis, Test-Time Scaling, Robust Learning, RL Alignment, etc.
+I'm working on [verl](https://github.com/volcengine/verl) (an RL framework for LLMs), at Seed-Infrastructures, ByteDance.
+
+My research lies in **LLM Reasoning**, including Test-Time Scaling, Reinforcement Learning, Robust Learning, etc.
 
 <!-- **Seeking research internship opportunities in LLM Reasoning and Reinforcement Learning.** -->
 
