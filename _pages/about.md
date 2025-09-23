@@ -37,17 +37,17 @@ My research lies in **LLM Reasoning**, including Test-Time Scaling, Reinforcemen
 
 **\* denotes equal contribution.**
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Progress</div><img src='images/pic-scan.png' width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/pic-scan.png' width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[SCAN: Self-Denoising Monte Carlo Annotation for Robust Process Reward Learning]()
+[SCAN: Self-Denoising Monte Carlo Annotation for Robust Process Reward Learning](https://arxiv.org/abs/2509.16548)
 
 **Yuyang Ding**, Xinyu Shi, Juntao Li, Xiaobo Liang, Zhaopeng Tu, Min Zhang
 
 **TL;DR:** We propose Self-Denoising Monte Carlo Annotation (SCAN), an efficient Process Reward Model (PRM) data synthesis and noise-tolerant learning framework.
 
-[![](https://img.shields.io/badge/arXiv-Paper-orange?logo=arxiv&logoColor=white)]()
-[![](https://img.shields.io/badge/GitHub-Code-blue?logo=github&logoColor=white)]()
+[![](https://img.shields.io/badge/arXiv-Paper-orange?logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2509.16548)
+[![](https://img.shields.io/badge/GitHub-Code-blue?logo=github&logoColor=white)](https://github.com/yyDing1/SCAN-PRM)
 [![](https://img.shields.io/badge/🤗 HuggingFace-Models-green)](https://huggingface.co/collections/dyyyyyyyy/scan-67f0fec64750003ba43d51d3)
 
 </div>
