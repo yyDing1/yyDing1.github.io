@@ -19,13 +19,11 @@ redirect_from:
 
 # 🎓 About Me
 
-I am Yuyang Ding (丁誉洋), a second-year Ph.D. student at the Institute of Artificial Intelligence, Soochow University, under the supervision of [Assoc. Prof. Juntao Li](https://lijuntaopku.github.io) and [Prof. Min Zhang](https://zhangmin-nlp-ai.github.io).
+I am Yuyang Ding (丁誉洋), a third-year Ph.D. student at the Institute of Artificial Intelligence, Soochow University, advised by [Assoc. Prof. Juntao Li](https://lijuntaopku.github.io) and [Prof. Min Zhang](https://zhangmin-nlp-ai.github.io).
 
-<!-- I'm a research intern at Seed-Infrastructures Team, ByteDance, working on large-scale reinforcement learning infrastructure. -->
+My research lies in **LLM Reasoning**, with particular interests in reinforcement learning, test-time scaling, and robust learning.
 
-I'm working on [verl](https://github.com/volcengine/verl) (an RL framework for LLMs), at Seed-Infrastructures, ByteDance.
-
-My research lies in **LLM Reasoning**, including Test-Time Scaling, Reinforcement Learning, Robust Learning, etc.
+I am currently a research intern at Seed-Infrastructures, ByteDance, contributing to [verl](https://github.com/volcengine/verl), a reinforcement learning framework for LLMs. My research focuses on the joint optimization of algorithms and infrastructure to enable effective and efficient reinforcement learning.
 
 <!-- **Seeking research internship opportunities in LLM Reasoning and Reinforcement Learning.** -->
 
