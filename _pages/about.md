@@ -23,7 +23,7 @@ I am Yuyang Ding (丁誉洋), a third-year Ph.D. student at the Institute of Art
 
 My research lies in **LLM Reasoning**, with particular interests in reinforcement learning, test-time scaling, and robust learning.
 
-I am currently a research intern at Seed-Infrastructures, ByteDance, contributing to [verl](https://github.com/volcengine/verl), a reinforcement learning framework for LLMs. My research focuses on the joint optimization of algorithms and infrastructure to enable effective and efficient reinforcement learning.
+I am currently a research intern at Seed-Infrastructures, ByteDance, contributing to [verl](https://github.com/volcengine/verl), a reinforcement learning framework for LLMs. My research focuses on the joint optimization of algorithms and infrastructure to enable scalable and efficient reinforcement learning.
 
 <!-- **Seeking research internship opportunities in LLM Reasoning and Reinforcement Learning.** -->
 
