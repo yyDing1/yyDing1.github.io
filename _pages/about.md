@@ -35,6 +35,23 @@ I am currently a research intern at Seed-Infrastructures, ByteDance, contributin
 
 **\* denotes equal contribution.**
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='images/pic-fapo.png' width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[FAPO: Flawed-Aware Policy Optimization for Efficient and Reliable Reasoning](https://arxiv.org/abs/2510.22543)
+
+**Yuyang Ding**, Chi Zhang, Juntao Li, Haibin Lin, Xin Liu, Min Zhang
+
+**TL;DR:** We propose Self-Denoising Monte Carlo Annotation (SCAN), an efficient Process Reward Model (PRM) data synthesis and noise-tolerant learning framework.
+
+[![](https://img.shields.io/badge/arXiv-Paper-orange?logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2510.22543)
+[![](https://img.shields.io/badge/GitHub-Code-blue?logo=github&logoColor=white)](https://github.com/yyDing1/FAPO)
+[![](https://img.shields.io/badge/🤗 HuggingFace-Models-green)](https://huggingface.co/collections/dyyyyyyyy/fapo)
+
+</div>
+</div>
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/pic-scan.png' width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
