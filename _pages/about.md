@@ -42,7 +42,7 @@ I am currently a research intern at Seed-Infrastructures, ByteDance, contributin
 
 **Yuyang Ding**, Chi Zhang, Juntao Li, Haibin Lin, Xin Liu, Min Zhang
 
-**TL;DR:** We propose Self-Denoising Monte Carlo Annotation (SCAN), an efficient Process Reward Model (PRM) data synthesis and noise-tolerant learning framework.
+**TL;DR:** We propose Flawed-Aware Policy Optimization (FAPO), which penalizes flawed patterns to achieve more efficient and reliable reinforcement learning.
 
 [![](https://img.shields.io/badge/arXiv-Paper-orange?logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2510.22543)
 [![](https://img.shields.io/badge/GitHub-Code-blue?logo=github&logoColor=white)](https://github.com/yyDing1/FAPO)
