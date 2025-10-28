@@ -38,7 +38,7 @@ I am currently a research intern at Seed-Infrastructures, ByteDance, contributin
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='images/pic-fapo.png' width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[FAPO: Flawed-Aware Policy Optimization for Efficient and Reliable Reasoning](https://arxiv.org/abs/2510.22543)
+[FAPO: Flawed-Aware Policy Optimization for Efficient and Reliable Reasoning](https://fapo-rl.github.io)
 
 **Yuyang Ding**, Chi Zhang, Juntao Li, Haibin Lin, Xin Liu, Min Zhang
 
@@ -55,7 +55,7 @@ I am currently a research intern at Seed-Infrastructures, ByteDance, contributin
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/pic-scan.png' width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[SCAN: Self-Denoising Monte Carlo Annotation for Robust Process Reward Learning](https://arxiv.org/abs/2509.16548)
+[SCAN: Self-Denoising Monte Carlo Annotation for Robust Process Reward Learning](https://scan-prm.github.io)
 
 **Yuyang Ding**, Xinyu Shi, Juntao Li, Xiaobo Liang, Zhaopeng Tu, Min Zhang
 
@@ -73,7 +73,7 @@ I am currently a research intern at Seed-Infrastructures, ByteDance, contributin
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025</div><img src='images/pic-scalequest.png' width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[ScaleQuest: Unleashing LLM Reasoning Capability via Scalable Question Synthesis from Scratch](https://arxiv.org/abs/2410.18693)
+[ScaleQuest: Unleashing LLM Reasoning Capability via Scalable Question Synthesis from Scratch](https://scalequest.github.io)
 
 **Yuyang Ding**, Xinyu Shi, Xiaobo Liang, Juntao Li, Zhaopeng Tu, Qiaoming Zhu, Min Zhang
 
