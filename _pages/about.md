@@ -41,10 +41,10 @@ I am currently a research intern at ByteDance Seed. My current research focuses 
 ### PhD student at OpenNLG group (23.09 - Present)
 
 - Advised by [Juntao Li](https://lijuntaopku.github.io) and [Min Zhang](https://zhangmin-nlp-ai.github.io)
-- LLM Reasoning (24.02 - Present):
+- LLM Reasoning (25.02 - Present):
   - SFT with Synthetic Data: [ScaleQuest: Unleashing LLM Reasoning Capability via Scalable Question Synthesis from Scratch]()
   - Robust Process Reward Modeling: [SCAN: Self-Denoising Monte Carlo Annotation for Robust Process Reward Learning]()
-- Robust Learning in Traditional NLP Tasks (Past - 24.02):
+- Robust Learning in Traditional NLP Tasks (23.09 - 25.02):
   - Robust NER: [GNER](https://arxiv.org/abs/2402.16602), [DS-NER](https://www.computer.org/csdl/journal/tk/5555/01/10988654/26tr7cYv7KU); Robust Classification: [SelfMix](https://arxiv.org/abs/2210.04525); Robust QA: [COLDQA](https://arxiv.org/abs/2302.04618).
 
 
