@@ -21,9 +21,31 @@ redirect_from:
 
 I am Yuyang Ding (丁誉洋), a third-year Ph.D. student at the Institute of Artificial Intelligence, Soochow University, advised by [Assoc. Prof. Juntao Li](https://lijuntaopku.github.io) and [Prof. Min Zhang](https://zhangmin-nlp-ai.github.io).
 
-My research lies in **LLM Reasoning**, with particular interests in reinforcement learning, test-time scaling, and robust learning.
+My research interest lies in **RL for LLM Reasoning**, with particular interests in **Agentic RL** and **Robust Reward Modeling**.
 
-I am currently a research intern at Seed-Infrastructures, ByteDance, contributing to [verl](https://github.com/volcengine/verl), a reinforcement learning framework for LLMs. My research focuses on the joint optimization of algorithms and infrastructure to enable scalable and efficient reinforcement learning.
+I am currently a research intern at ByteDance Seed. My current research focuses on the joint optimization of algorithms and infrastructure to enable scalable and effective reinforcement learning.
+- On the algorithmic side, I work on scaling LLM Agents to effectively operate in more complex environments and real-world interactions.
+- On the systems side, I focus on scaling reinforcement learning frameworks to efficiently run on large-scale computational resources.
+
+## Research Experience
+
+### Research Intern at ByteDance Seed (25.06 - Present)
+
+- Maintainer and Core Contributor of LLM RL Library [veRL](https://github.com/volcengine/verl), advised by [Chi Zhang](https://sites.google.com/view/chizhang-usc/), [Xibin Wu](https://github.com/wuxibin89), and [Haibin Lin](https://sites.google.com/view/haibinlin/)
+- Reinforcement Learning with Generative Rewards (25.06 - 25.10):
+  - Algorithm Paper: [FAPO: Flawed-Aware Policy Optimization for Efficient and Reliable Reasoning](https://fapo-rl.github.io/)
+  - Infrastructure Design: Asynchronous [Reward Loop](https://verl.readthedocs.io/en/latest/advance/reward_loop.html) design for efficient and Flexible Reward Computation
+- Agentic Reinforcement Learning (25.10 - Present):
+  - On-going Research, Stay Tuned
+
+### PhD student at OpenNLG group (23.09 - Present)
+
+- LLM Reasoning (24.05 - Present):
+  - SFT with Synthetic Data: [ScaleQuest: Unleashing LLM Reasoning Capability via Scalable Question Synthesis from Scratch]()
+  - Robust Process Reward Modeling: [SCAN: Self-Denoising Monte Carlo Annotation for Robust Process Reward Learning]()
+- Robust Learning in Traditional NLP Tasks (23.06 - 24.05):
+  - Robust NER: [GNER](https://arxiv.org/abs/2402.16602), [DS-NER](https://www.computer.org/csdl/journal/tk/5555/01/10988654/26tr7cYv7KU); Robust Classification: [SelfMix](https://arxiv.org/abs/2210.04525); Robust QA: [COLDQA](https://arxiv.org/abs/2302.04618).
+
 
 <!-- **Seeking research internship opportunities in LLM Reasoning and Reinforcement Learning.** -->
 
@@ -165,6 +187,7 @@ Dan Qiao\*, Chenchen Dai\*, <strong>Yuyang Ding*</strong>, Juntao Li, Qiang Chen
 
 
 # 🎖 Honors and Awards
+- National Scholarship
 - CCF Elite Collegiate Award
 - ICPC National Invitational Programming Contest, **Gold Medal**
 - ICPC Asia-East Continent Final Contest (EC-Final), **Silver Medal**
