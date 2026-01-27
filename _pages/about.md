@@ -56,12 +56,12 @@ I am currently a research intern at ByteDance Seed. My current research focuses 
 
 **\* denotes equal contribution.**
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='images/pic-fapo.png' width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><img src='images/pic-fapo.png' width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [FAPO: Flawed-Aware Policy Optimization for Efficient and Reliable Reasoning](https://fapo-rl.github.io)
 
-**Yuyang Ding**, Chi Zhang, Juntao Li, Haibin Lin, Xin Liu, Min Zhang
+**Yuyang Ding**, Chi Zhang, Juntao Li, Haibin Lin, Min Zhang
 
 **TL;DR:** We propose Flawed-Aware Policy Optimization (FAPO), which penalizes flawed patterns to achieve more efficient and reliable reinforcement learning.
 
